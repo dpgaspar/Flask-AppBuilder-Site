@@ -16,6 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
+msgid "Info"
+msgstr ""
+
+msgid "Contacts"
+msgstr ""
+
+
 #: build/lib.linux-x86_64-2.7/flask_appbuilder/messages.py:9
 #: flask_appbuilder/messages.py:9
 msgid "Security"
