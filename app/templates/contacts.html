@@ -2,14 +2,19 @@
 {% extends "appbuilder/base.html" %}
 
 {% block content %}
-<h2>Contacts</h2>
-Please you can contact me at:
 
-danielvazgaspar@gmail.com
-
-With any questions you would like related with this project.
-
+<div class="container">
+      <!-- Example row of columns -->
+      <div class="row well">
+        <div class="col-md-12">
+          <h2>{{_("Contacts")}}</h2>
+          <p>{{_("Contact us with any questions you would like related with this project.")}} </p>
+          <p><span class="glyphicon glyphicon-hand-right"></span>
+                flask.appbuilder@gmail.com</p>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
 
 
