@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-01-14 14:23+0000\n"
+"POT-Creation-Date: 2014-04-14 00:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,22 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
+
+#: app/views.py:92
+msgid "List Groups"
+msgstr ""
+
+#: app/views.py:93
+msgid "List Contacts"
+msgstr ""
+
+#: app/views.py:94
+msgid "Contacts Chart"
+msgstr ""
+
+#: app/views.py:95
+msgid "Contacts Birth Chart"
+msgstr ""
 
 #: app/templates/contacts.html:10
 msgid "Contacts"
@@ -25,53 +41,66 @@ msgstr ""
 msgid "Contact us with any questions you would like related with this project."
 msgstr ""
 
-#: app/templates/index.html:9
-msgid ""
-"Application Builder is a rapid application development framework. It was "
-"built with strong and detailed security on mind. Mobile, desktop and "
-"tablet integration. Our goal: inexpensive IT integration to your business"
-" needs"
-msgstr ""
-
-#: app/templates/index.html:10
-msgid "Learn more"
-msgstr ""
-
-#: app/templates/index.html:18
-msgid "Free and Open Source"
-msgstr ""
-
 #: app/templates/index.html:19
 msgid ""
-"Open Source is a main force on IT our days. F.A.B. was built free for you"
-" to use, and mostly to contribute in this exciting new project. The more "
-"contribute the better and stronger the project"
+"App Builder is a simple and rapid application development framework. "
+"built on top of Flask.\n"
+"            Featuring:"
 msgstr ""
 
-#: app/templates/index.html:20 app/templates/index.html:25
-#: app/templates/index.html:30
-msgid "View details"
+#: app/templates/index.html:21
+msgid "Strong and detailed security on mind."
+msgstr ""
+
+#: app/templates/index.html:22
+msgid "Mobile first philosophy from bootstrap."
 msgstr ""
 
 #: app/templates/index.html:23
-msgid "Versatility"
+msgid "Database highly configurable web CRUD, forms, charts and much more."
 msgstr ""
 
-#: app/templates/index.html:24
+#: app/templates/index.html:26
+msgid "Star it"
+msgstr ""
+
+#: app/templates/index.html:35
+msgid "Free and Open Source"
+msgstr ""
+
+#: app/templates/index.html:36
 msgid ""
-"F.A.B. was built, with great and new technology, we've done it using one "
-"of the best and exciting new programing languages Python, and an "
-"extremely fast and versatil web framework called Flask."
+"Use it any way you like, it's free to use. Feel free to contribute, post "
+"questions, propose new features, report bugs. You can browse the code "
+"freely on github."
 msgstr ""
 
-#: app/templates/index.html:28
-msgid "Mobile device friendly"
+#: app/templates/index.html:38
+msgid "Issues"
 msgstr ""
 
-#: app/templates/index.html:29
+#: app/templates/index.html:47 app/templates/index.html:50
+msgid "Documentation"
+msgstr ""
+
+#: app/templates/index.html:48
 msgid ""
-"Mobile integration is a must. We took great care supporting it in a "
-"simple and revolucionary new way, using the best technology available "
-"today"
+"Every feature is documented with examples. API documentation is "
+"automatically generated from commented code."
+msgstr ""
+
+#: app/templates/index.html:59
+msgid "Live Demo"
+msgstr ""
+
+#: app/templates/index.html:60
+msgid ""
+"Login and get a hold on the quick how to example, with a simple contacts "
+"app. This will show the basic features of the framework. Feel free to "
+"login using user 'guest' password 'welcome'"
+msgstr ""
+
+#: app/templates/index.html:62
+msgid "Login"
 msgstr ""
 

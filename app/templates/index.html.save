@@ -1,0 +1,47 @@
+You can override and costumize almost everything, or use diferent templates and widgets already on the framework.
+
+Event better you can develop your own widgets or templated and contribute to the project.<!-- extend base layout -->
+{% extends "appbuilder/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+      <div class="container">
+        <h1>Flask App Builder</h1>
+        <p>{{_("Application Builder is a rapid application development framework. It was built with strong and detailed security on mind. Mobile, desktop and tablet integration. Our goal: inexpensive IT integration to your business needs")}}</p>
+        <p><a class="btn btn-primary btn-lg" role="button">{{_("Learn more")}} &raquo;</a></p>
+      </div>
+    </div>
+
+<div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>{{_("Free and Open Source")}}</h2>
+          <p>{{_("Open Source is a main force on IT our days. F.A.B. was built free for you to use, and mostly to contribute in this exciting new project. The more contribute the better and stronger the project")}} </p>
+          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>{{_("Versatility")}}</h2>
+          <p>{{_("F.A.B. was built, with great and new technology, we've done it using one of the best and exciting new programing languages Python, and an extremely fast and versatil web framework called Flask.")}}</p>
+          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>{{_("Mobile device friendly")}}</h2>
+          <p>{{_("Mobile integration is a must. We took great care supporting it in a simple and revolucionary new way, using the best technology available today")}}</p>
+          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; F.A.B. 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+</div>
+{% endblock %}
+
+

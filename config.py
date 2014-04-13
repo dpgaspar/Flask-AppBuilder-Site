@@ -12,14 +12,16 @@ OPENID_PROVIDERS = [
     { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
 
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-#SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
+#SQLALCHEMY_DATABASE_URI = 'mysql://root:password@localhost/quickhowto'
+#SQLALCHEMY_DATABASE_URI = 'postgresql://scott:tiger@localhost:5432/myapp'
+#SQLALCHEMY_ECHO = True
 
 BABEL_DEFAULT_LOCALE = 'en'
-
+BABEL_DEFAULT_FOLDER = 'translations'
 LANGUAGES = {
     'en': {'flag':'gb', 'name':'English'},
     'pt': {'flag':'pt', 'name':'Portugal'},
-    'es': {'flag':'es', 'name':'Spain'}
+    'es': {'flag':'es', 'name':'Espanol'}
 }
 
 
@@ -31,10 +33,11 @@ UPLOAD_FOLDER = basedir + '/app/static/uploads/'
 IMG_UPLOAD_FOLDER = basedir + '/app/static/uploads/'
 IMG_UPLOAD_URL = '/static/uploads/'
 AUTH_TYPE = 1
+#AUTH_LDAP_SERVER = "ldap://dc.domain.net"
 AUTH_ROLE_ADMIN = 'Admin'
 AUTH_ROLE_PUBLIC = 'Public'
-APP_NAME = "F.A.B."
-#APP_THEME = ""                  # default
+APP_NAME = "F.A.B. Example"
+APP_THEME = ""                  # default
 #APP_THEME = "cerulean.css"      # COOL
 #APP_THEME = "amelia.css"
 #APP_THEME = "cosmo.css"
@@ -44,5 +47,5 @@ APP_NAME = "F.A.B."
 #APP_THEME = "readable.css"
 #APP_THEME = "simplex.css"
 #APP_THEME = "slate.css"          # COOL
-APP_THEME = "spacelab.css"      # NICE
+#APP_THEME = "spacelab.css"      # NICE
 #APP_THEME = "united.css"

@@ -3,43 +3,77 @@
 
 {% block content %}
 
-<div class="jumbotron">
-      <div class="container">
-        <h1>Flask App Builder</h1>
-        <p>{{_("Application Builder is a rapid application development framework. It was built with strong and detailed security on mind. Mobile, desktop and tablet integration. Our goal: inexpensive IT integration to your business needs")}}</p>
-        <p><a class="btn btn-primary btn-lg" role="button">{{_("Learn more")}} &raquo;</a></p>
-      </div>
-    </div>
-
-<div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>{{_("Free and Open Source")}}</h2>
-          <p>{{_("Open Source is a main force on IT our days. F.A.B. was built free for you to use, and mostly to contribute in this exciting new project. The more contribute the better and stronger the project")}} </p>
-          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+       <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+       <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="jumbotron">
+            <div class="container">
+            <h1><i class="fa fa-desktop">Flask App Builder</i></h1>
+            <p>{{_("App Builder is a simple and rapid application development framework. built on top of Flask.
+            Featuring:")}}</p>
+            <li>{{_("Strong and detailed security on mind.")}}</li>
+            <li>{{_("Mobile first philosophy from bootstrap.")}}</li>
+            <li>{{_("Database highly configurable web CRUD, forms, charts and much more.")}}</li>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder/star"
+                 role="button">{{_("Star it")}} <i class="fa fa-thumbs-up"></i></a></p>
+            </center>
+            </div>
+           </div>
         </div>
-        <div class="col-md-4">
-          <h2>{{_("Versatility")}}</h2>
-          <p>{{_("F.A.B. was built, with great and new technology, we've done it using one of the best and exciting new programing languages Python, and an extremely fast and versatil web framework called Flask.")}}</p>
-          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>{{_("Mobile device friendly")}}</h2>
-          <p>{{_("Mobile integration is a must. We took great care supporting it in a simple and revolucionary new way, using the best technology available today")}}</p>
-          <p><a class="btn btn-default" href="#" role="button">{{_("View details")}} &raquo;</a></p>
+
+        <div class="item">
+            <div class="jumbotron">
+            <div class="container">
+            <h1><i class="fa fa-github">{{_("Free and Open Source")}}</i></h1>
+                <p>{{_("Use it any way you like, it's free to use. Feel free to contribute, post questions, propose new features, report bugs. You can browse the code freely on github.")}}</p>
+            <center>
+                <p><a class="btn btn-primary btn-lg" href="https://github.com/dpgaspar/Flask-AppBuilder/issues" role="button">{{_("Issues")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
         </div>
-      </div>
 
-      <hr>
+        <div class="item">
+            <div class="jumbotron">
+            <div class="container">
+            <h1><i class="fa fa-book">{{_("Documentation")}}</i></h1>
+            <p>{{_("Every feature is documented with examples. API documentation is automatically generated from commented code.")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="http://flask-appbuilder.readthedocs.org/en/latest/" role="button">{{_("Documentation")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
+        </div>
 
-      <footer>
-        <p>&copy; F.A.B. 2013</p>
-      </footer>
-    </div> <!-- /container -->
+        <div class="item">
+            <div class="jumbotron">
+            <div class="container">
+            <h1><i class="fa fa-play">{{_("Live Demo")}}</i></h1>
+            <p>{{_("Login and get a hold on the quick how to example, with a simple contacts app. This will show the basic features of the framework. Feel free to login using user 'guest' password 'welcome'")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg"  href="login" role="button">{{_("Login")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+</div>
 
+    <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
 
 </div>
+
 {% endblock %}
-
-
