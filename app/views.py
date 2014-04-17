@@ -83,7 +83,15 @@ class GroupGeneralView(GeneralView):
     related_views = [ContactGeneralView]
     #show_template = 'appbuilder/general/model/show_cascade.html'
 
-
+class ThemesView(IndexView):
+    route_base = "/themes"
+    index_template = 'contactus.html'
+    @expose('/<str:theme>')
+    def index(self, theme):
+        self.baseapp.app_theme = "%s.css" % (theme)
+        return redirect(self._get_redirect())
+        
+        
 class GroupMasterView(MasterDetailView):
     datamodel = SQLAModel(Group, db.session)
     related_views = [ContactGeneralView]
@@ -97,7 +105,7 @@ fixed_translations_import = [
 
 fill_gender()
 genapp = BaseApp(app, db, indexview = FABView)
-genapp.add_link(name="Theme 1", href="/theme/theme1",icon="fa-external-link", category="Themes")
+
 genapp.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", category="Contacts")
 genapp.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o", category="Contacts")
 genapp.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope", category="Contacts")
@@ -105,3 +113,9 @@ genapp.add_separator("Contacts")
 genapp.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard", category="Contacts")
 genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard", category="Contacts")
 
+genapp.add_view_no_menu(ThemesView())
+
+genapp.add_link(name="Theme 1", href="/theme/cerulean",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 2", href="/theme/amelia",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 3", href="/theme/theme1",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 4", href="/theme/theme1",icon="fa-external-link", category="Themes")
