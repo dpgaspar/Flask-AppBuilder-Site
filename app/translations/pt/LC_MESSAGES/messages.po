@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-04-18 00:17+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2014-04-18 00:26+0100\n"
+"PO-Revision-Date: 2014-04-18 00:26+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pt <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: app/views.py:114
 msgid "List Groups"
-msgstr "Lista de Grupos"
+msgstr ""
 
 #: app/views.py:115 app/templates/contacts.html:10
 msgid "Contacts"
-msgstr "Contactos"
+msgstr ""
 
 #: app/views.py:117
 msgid "Master Detail Groups"
@@ -31,19 +32,19 @@ msgstr ""
 
 #: app/views.py:119
 msgid "List Contacts"
-msgstr "Lista de Contactos"
+msgstr ""
 
 #: app/views.py:122
 msgid "Contacts Chart"
-msgstr "Gráfico de Contactos"
+msgstr ""
 
 #: app/views.py:124
 msgid "Contacts Birth Chart"
-msgstr "Gráfico de Contactos por Nascimento"
+msgstr ""
 
 #: app/views.py:129
 msgid "Themes"
-msgstr "Temas"
+msgstr ""
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
@@ -54,11 +55,11 @@ msgid ""
 "App Builder is a simple and rapid application development framework. "
 "built on top of Flask.\n"
 "            Featuring:"
-msgstr "App Builder é uma plataforma de desenvolvimento rápido e simples. Incluí:"
+msgstr ""
 
 #: app/templates/index.html:21
 msgid "Strong and detailed security on mind."
-msgstr "Segurança forte e detalhada."
+msgstr ""
 
 #: app/templates/index.html:22
 msgid "Mobile first philosophy from bootstrap."
@@ -70,7 +71,7 @@ msgstr ""
 
 #: app/templates/index.html:26
 msgid "Star it"
-msgstr "Gosto"
+msgstr ""
 
 #: app/templates/index.html:35
 msgid "Free and Open Source"
