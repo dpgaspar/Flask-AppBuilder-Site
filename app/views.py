@@ -97,6 +97,7 @@ fixed_translations_import = [
 
 fill_gender()
 genapp = BaseApp(app, db, indexview = FABView)
+genapp.add_link(name="Theme 1", href="/theme/theme1",icon="fa-external-link", category="Themes")
 genapp.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", category="Contacts")
 genapp.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o", category="Contacts")
 genapp.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope", category="Contacts")
