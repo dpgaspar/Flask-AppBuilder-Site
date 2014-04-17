@@ -88,10 +88,10 @@ class ThemesView(IndexView):
     index_template = 'contactus.html'
     @expose('/<string:theme>')
     def index(self, theme=''):
-        if theme:
-            self.baseapp.app_theme = "%s.css" % (theme)
+        if theme == "default":
+            self.baseapp.app_theme = ''
         else:
-            self.baseapp.app_them = ''
+            self.baseapp.app_theme = "%s.css" % (theme)
         return redirect(self._get_redirect())
         
         
@@ -127,5 +127,5 @@ genapp.add_link(name="Simplex", href="/themes/simplex",icon="fa-external-link", 
 genapp.add_link(name="Slate", href="/themes/slate",icon="fa-external-link", category="Themes")
 genapp.add_link(name="Spacelab", href="/themes/spacelab",icon="fa-external-link", category="Themes")
 genapp.add_link(name="United", href="/themes/united",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Default", href="/themes/",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Default", href="/themes/default",icon="fa-external-link", category="Themes")
 
