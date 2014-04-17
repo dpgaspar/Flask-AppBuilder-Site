@@ -86,7 +86,7 @@ class GroupGeneralView(GeneralView):
 class ThemesView(IndexView):
     route_base = "/themes"
     index_template = 'contactus.html'
-    @expose('/<str:theme>')
+    @expose('/<theme>')
     def index(self, theme):
         self.baseapp.app_theme = "%s.css" % (theme)
         return redirect(self._get_redirect())
