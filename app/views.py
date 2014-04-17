@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, redirect
 from flask.ext.appbuilder.baseapp import BaseApp
 from flask.ext.appbuilder.models.datamodel import SQLAModel
 from flask.ext.appbuilder.views import MasterDetailView, GeneralView, IndexView
