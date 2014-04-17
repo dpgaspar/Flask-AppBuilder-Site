@@ -87,7 +87,7 @@ class ThemesView(IndexView):
     route_base = "/themes"
     index_template = 'contactus.html'
     @expose('/<theme>')
-    def index(self, theme):
+    def index(self, theme=''):
         if theme:
             self.baseapp.app_theme = "%s.css" % (theme)
         else:
