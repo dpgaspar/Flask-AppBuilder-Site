@@ -115,7 +115,7 @@ genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboa
 
 genapp.add_view_no_menu(ThemesView())
 
-genapp.add_link(name="Theme 1", href="/theme/cerulean",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 2", href="/theme/amelia",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 3", href="/theme/theme1",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 4", href="/theme/theme1",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 1", href="/themes/cerulean",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 2", href="/themes/amelia",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 3", href="/themes/theme1",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Theme 4", href="/themes/theme1",icon="fa-external-link", category="Themes")
