@@ -88,7 +88,10 @@ class ThemesView(IndexView):
     index_template = 'contactus.html'
     @expose('/<theme>')
     def index(self, theme):
-        self.baseapp.app_theme = "%s.css" % (theme)
+        if theme:
+            self.baseapp.app_theme = "%s.css" % (theme)
+        else:
+            self.baseapp.app_them = ''
         return redirect(self._get_redirect())
         
         
@@ -115,7 +118,14 @@ genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboa
 
 genapp.add_view_no_menu(ThemesView())
 
-genapp.add_link(name="Theme 1", href="/themes/cerulean",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 2", href="/themes/amelia",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 3", href="/themes/theme1",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Theme 4", href="/themes/theme1",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Cerulean", href="/themes/cerulean",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Amelia", href="/themes/amelia",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Flatly", href="/themes/flatly",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Journal", href="/themes/journal",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Readable", href="/themes/readable",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Simplex", href="/themes/simplex",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Slate", href="/themes/slate",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Spacelab", href="/themes/spacelab",icon="fa-external-link", category="Themes")
+genapp.add_link(name="United", href="/themes/united",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Default", href="/themes/",icon="fa-external-link", category="Themes")
+
