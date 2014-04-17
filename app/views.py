@@ -29,9 +29,10 @@ class FABView(IndexView):
 class ContactUsView(IndexView):
     route_base = "/contacts"
     index_template = 'contactus.html'
+
     @expose('/')
     def index(self):
-        return render_template(self.index_template, baseapp = self.baseapp)
+        return render_template(self.index_template, baseapp=self.baseapp)
 
 
 class ContactGeneralView(GeneralView):
@@ -63,6 +64,7 @@ class ContactGeneralView(GeneralView):
             {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
     ]
 
+
 class ContactChartView(ChartView):
     chart_title = 'Grouped contacts'
     label_columns = ContactGeneralView.label_columns
@@ -83,49 +85,56 @@ class GroupGeneralView(GeneralView):
     related_views = [ContactGeneralView]
     #show_template = 'appbuilder/general/model/show_cascade.html'
 
-class ThemesView(IndexView):
-    route_base = "/themes"
-    index_template = 'contactus.html'
-    @expose('/<string:theme>')
+
+class ConfigView(IndexView):
+    route_base = "/config"
+
+    @expose('/themes/<string:theme>')
     def index(self, theme=''):
         if theme == "default":
             self.baseapp.app_theme = ''
         else:
             self.baseapp.app_theme = "%s.css" % (theme)
         return redirect(self._get_redirect())
-        
-        
+
+    @expose('/navreverse/')
+    def navreverse(self):
+        self.baseapp.menu.reverse = not self.baseapp.menu.reverse
+        return redirect(self._get_redirect())
+
+
 class GroupMasterView(MasterDetailView):
     datamodel = SQLAModel(Group, db.session)
     related_views = [ContactGeneralView]
 
-fixed_translations_import = [
-    _("List Groups"),
-    _("List Contacts"),
-    _("Contacts Chart"),
-    _("Contacts Birth Chart")]
 
 
 fill_gender()
-genapp = BaseApp(app, db, indexview = FABView)
-
-genapp.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", category="Contacts")
-genapp.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o", category="Contacts")
-genapp.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope", category="Contacts")
+genapp = BaseApp(app, db, indexview=FABView)
+genapp.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
+                category="Contacts", category_icon='fa-envelope', category_label=_('Contacts'))
+genapp.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o",
+                label=_("Master Detail Groups"), category="Contacts")
+genapp.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope",
+                label=_('List Contacts'), category="Contacts")
 genapp.add_separator("Contacts")
-genapp.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard", category="Contacts")
-genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard", category="Contacts")
+genapp.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard",
+                label=_('Contacts Chart'), category="Contacts")
+genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard",
+                label=_('Contacts Birth Chart'), category="Contacts")
 
-genapp.add_view_no_menu(ThemesView())
+genapp.add_view_no_menu(ConfigView())
 
-genapp.add_link(name="Cerulean", href="/themes/cerulean",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Amelia", href="/themes/amelia",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Flatly", href="/themes/flatly",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Journal", href="/themes/journal",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Readable", href="/themes/readable",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Simplex", href="/themes/simplex",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Slate", href="/themes/slate",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Spacelab", href="/themes/spacelab",icon="fa-external-link", category="Themes")
-genapp.add_link(name="United", href="/themes/united",icon="fa-external-link", category="Themes")
-genapp.add_link(name="Default", href="/themes/default",icon="fa-external-link", category="Themes")
+genapp.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
+                category="Themes", category_label=_('Themes'))
+genapp.add_link(name="Amelia", href="/config/themes/amelia", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Flatly", href="/config/themes/flatly", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Journal", href="/config/themes/journal", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Readable", href="/config/themes/readable", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Simplex", href="/config/themes/simplex", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Slate", href="/config/themes/slate", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Spacelab", href="/config/themes/spacelab", icon="fa-external-link", category="Themes")
+genapp.add_link(name="United", href="/config/themes/united", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Default", href="/config/themes/default", icon="fa-external-link", category="Themes")
+genapp.add_link(name="Reverse Menu", href="/config/navreverse", icon="fa-external-link")
 
