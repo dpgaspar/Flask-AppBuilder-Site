@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-04-19 18:14+0100\n"
+"POT-Creation-Date: 2014-04-19 18:42+0100\n"
 "PO-Revision-Date: 2014-04-18 00:37+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -20,31 +19,31 @@ msgstr ""
 
 #: app/views.py:114
 msgid "List Groups"
-msgstr ""
+msgstr "Lista de Grupos"
 
 #: app/views.py:115 app/templates/contacts.html:10
 msgid "Contacts"
-msgstr ""
+msgstr "Contactos"
 
 #: app/views.py:117
 msgid "Master Detail Groups"
-msgstr ""
+msgstr "Master Detail de Grupos"
 
 #: app/views.py:119
 msgid "List Contacts"
-msgstr ""
+msgstr "Lista de Contactos"
 
 #: app/views.py:122
 msgid "Contacts Chart"
-msgstr ""
+msgstr "Gŕafico Contactos"
 
 #: app/views.py:124
 msgid "Contacts Birth Chart"
-msgstr ""
+msgstr "Gráfico de Contactos Nacimiento"
 
 #: app/views.py:129
 msgid "Themes"
-msgstr ""
+msgstr "Temas"
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
@@ -56,26 +55,30 @@ msgid ""
 "built on top of Flask.\n"
 "            Featuring:"
 msgstr ""
+"App Builder es un marco de desarrollo de aplicaciones simples y "
+"rápidos.construido en la cima de Flask. Con:"
 
 #: app/templates/index.html:21
 msgid "Strong and detailed security on mind."
-msgstr ""
+msgstr "Seguridad sólida y detallada."
 
 #: app/templates/index.html:22
 msgid "Mobile first philosophy from bootstrap."
-msgstr ""
+msgstr "Filosofía principal móvil con bootstrap."
 
 #: app/templates/index.html:23
 msgid "Database highly configurable web CRUD, forms, charts and much more."
 msgstr ""
+"Base de datos altamente configurable CRUD web, formularios, cartas y "
+"mucho más."
 
 #: app/templates/index.html:26
 msgid "Star it"
-msgstr ""
+msgstr "Estrellas"
 
 #: app/templates/index.html:35
 msgid "Free and Open Source"
-msgstr ""
+msgstr "Libre y de Código Abierto"
 
 #: app/templates/index.html:36
 msgid ""
@@ -83,20 +86,25 @@ msgid ""
 "questions, propose new features, report bugs. You can browse the code "
 "freely on github."
 msgstr ""
+"Úsalo como quieras, es de uso gratuito. Siéntase libre de contribuir, "
+"coloca preguntas, proponer nuevas características, informar de errores. "
+"Usted puede navegar por el códigoLibremente en github."
 
 #: app/templates/index.html:38
 msgid "Issues"
-msgstr ""
+msgstr "Cuestiones"
 
 #: app/templates/index.html:47 app/templates/index.html:50
 msgid "Documentation"
-msgstr ""
+msgstr "Documentación"
 
 #: app/templates/index.html:48
 msgid ""
 "Every feature is documented with examples. API documentation is "
 "automatically generated from commented code."
 msgstr ""
+"Cada función se documenta con ejemplos. Documentación de la API es "
+"generada automáticamente de código comentado."
 
 #: app/templates/index.html:59
 msgid "Live Demo"
@@ -108,8 +116,12 @@ msgid ""
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
 msgstr ""
+"Inicia sesión y obtener una bodega en la rápida manera de ejemplo, con "
+"unos simples contactosaplicación. Esto le mostrará las características "
+"básicas de la estructura. Siéntase libre deinicio de sesión utilizando el"
+" usuario 'guest' 'welcome' password"
 
 #: app/templates/index.html:62
 msgid "Login"
-msgstr ""
+msgstr "Inicio"
 
