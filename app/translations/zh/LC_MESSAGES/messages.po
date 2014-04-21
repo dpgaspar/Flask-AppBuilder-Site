@@ -70,15 +70,15 @@ msgstr "从移动至上的理念 Bootstrap。"
 
 #: app/templates/index.html:23
 msgid "Database highly configurable web CRUD, forms, charts and much more."
-msgstr ""
+msgstr "数据库高度可配置的Web CRUD，表格，图表等等。"
 
 #: app/templates/index.html:26
 msgid "Star it"
-msgstr ""
+msgstr "加上星"
 
 #: app/templates/index.html:35
 msgid "Free and Open Source"
-msgstr ""
+msgstr "自由和开放源码"
 
 #: app/templates/index.html:36
 msgid ""
@@ -86,24 +86,29 @@ msgid ""
 "questions, propose new features, report bugs. You can browse the code "
 "freely on github."
 msgstr ""
+"使用任何你喜欢的方式，它是免费使用。随意作出贡献，岗位"
+"的问题，提出了新的功能，报告bug，你可以浏览代码"
+"自由在GitHub上。"
 
 #: app/templates/index.html:38
 msgid "Issues"
-msgstr ""
+msgstr "问题"
 
 #: app/templates/index.html:47 app/templates/index.html:50
 msgid "Documentation"
-msgstr ""
+msgstr "文档"
 
 #: app/templates/index.html:48
 msgid ""
 "Every feature is documented with examples. API documentation is "
 "automatically generated from commented code."
 msgstr ""
+"每一个功能是记录与实例。API文档是"
+"自动从注释的代码生成的。"
 
 #: app/templates/index.html:59
 msgid "Live Demo"
-msgstr ""
+msgstr "现场演示"
 
 #: app/templates/index.html:60
 msgid ""
@@ -111,8 +116,11 @@ msgid ""
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
 msgstr ""
+"登录并获得快速如何例如保持，用一个简单的接触"
+"应用程序。这将显示该框架的基本功能。随意"
+"使用用户登录'客人'密码'欢迎'"
 
 #: app/templates/index.html:62
 msgid "Login"
-msgstr ""
+msgstr "注册"
 
