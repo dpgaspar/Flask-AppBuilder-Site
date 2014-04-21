@@ -22,7 +22,7 @@ LANGUAGES = {
     'en': {'flag':'gb', 'name':'English'},
     'pt': {'flag':'pt', 'name':'Portugues'},
     'es': {'flag':'es', 'name':'Espanol'},
-    'zh': {'flag':'ch', 'name':'Chinese'}
+    'zh': {'flag':'cn', 'name':'Chinese'}
 }
 
 
