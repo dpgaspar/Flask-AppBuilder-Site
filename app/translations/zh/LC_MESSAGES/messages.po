@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-04-21 22:39+0100\n"
+"POT-Creation-Date: 2014-04-25 15:28+0100\n"
 "PO-Revision-Date: 2014-04-21 22:38+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: zh <LL@li.org>\n"
@@ -56,8 +55,7 @@ msgid ""
 "built on top of Flask.\n"
 "            Featuring:"
 msgstr ""
-"应用程序生成器是一个简单而快速的应用程序开发框架。"
-"建立在瓶上。\n"
+"应用程序生成器是一个简单而快速的应用程序开发框架。建立在瓶上。\n"
 "特色"
 
 #: app/templates/index.html:21
@@ -85,10 +83,7 @@ msgid ""
 "Use it any way you like, it's free to use. Feel free to contribute, post "
 "questions, propose new features, report bugs. You can browse the code "
 "freely on github."
-msgstr ""
-"使用任何你喜欢的方式，它是免费使用。随意作出贡献，岗位"
-"的问题，提出了新的功能，报告bug，你可以浏览代码"
-"自由在GitHub上。"
+msgstr "使用任何你喜欢的方式，它是免费使用。随意作出贡献，岗位的问题，提出了新的功能，报告bug，你可以浏览代码自由在GitHub上。"
 
 #: app/templates/index.html:38
 msgid "Issues"
@@ -102,9 +97,7 @@ msgstr "文档"
 msgid ""
 "Every feature is documented with examples. API documentation is "
 "automatically generated from commented code."
-msgstr ""
-"每一个功能是记录与实例。API文档是"
-"自动从注释的代码生成的。"
+msgstr "每一个功能是记录与实例。API文档是自动从注释的代码生成的。"
 
 #: app/templates/index.html:59
 msgid "Live Demo"
@@ -115,10 +108,7 @@ msgid ""
 "Login and get a hold on the quick how to example, with a simple contacts "
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
-msgstr ""
-"登录并获得快速如何例如保持，用一个简单的接触"
-"应用程序。这将显示该框架的基本功能。随意"
-"使用用户登录'客人'密码'欢迎'"
+msgstr "登录并获得快速如何例如保持，用一个简单的接触应用程序。这将显示该框架的基本功能。随意使用用户登录'客人'密码'欢迎'"
 
 #: app/templates/index.html:62
 msgid "Login"

@@ -20,9 +20,11 @@ BABEL_DEFAULT_LOCALE = 'en'
 BABEL_DEFAULT_FOLDER = 'translations'
 LANGUAGES = {
     'en': {'flag':'gb', 'name':'English'},
-    'pt': {'flag':'pt', 'name':'Portugues'},
-    'es': {'flag':'es', 'name':'Espanol'},
-    'zh': {'flag':'cn', 'name':'Chinese'}
+    'pt': {'flag':'pt', 'name':'Portuguese'},
+    'es': {'flag':'es', 'name':'Spanish'},
+    'de': {'flag':'de', 'name':'German'},
+    'zh': {'flag':'cn', 'name':'Chinese'},
+    'ru': {'flag':'ru', 'name':'Russian'}
 }
 
 

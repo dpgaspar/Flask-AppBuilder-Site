@@ -1,53 +1,42 @@
-# Translations template for PROJECT.
+# Russian translations for PROJECT.
 # Copyright (C) 2014 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-04-25 15:28+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
 
 #: app/views.py:114
 msgid "List Groups"
-msgstr ""
+msgstr "Список группы"
 
 #: app/views.py:115 app/templates/contacts.html:10
 msgid "Contacts"
-msgstr ""
+msgstr "связи"
 
 #: app/views.py:117
 msgid "Master Detail Groups"
-msgstr ""
+msgstr "Мастер Подробно Группы"
 
 #: app/views.py:119
 msgid "List Contacts"
-msgstr ""
+msgstr "лист Контакты"
 
 #: app/views.py:122
 msgid "Contacts Chart"
-msgstr ""
+msgstr "Контакты График"
 
 #: app/views.py:124
 msgid "Contacts Birth Chart"
-msgstr ""
+msgstr "График Контакты рождения"
 
 #: app/views.py:129
 msgid "Themes"
-msgstr ""
+msgstr "Темы"
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
-msgstr ""
+msgstr "Свяжитесь с нами по любым вопросам , которые вы хотели связанные с этим проектом ."
 
 #: app/templates/index.html:19
 msgid ""
@@ -55,26 +44,29 @@ msgid ""
 "built on top of Flask.\n"
 "            Featuring:"
 msgstr ""
+"App Builder является простым и быстрым база разработки приложений."
+построен на вершине Flask."
+"В ролях:"
 
 #: app/templates/index.html:21
 msgid "Strong and detailed security on mind."
-msgstr ""
+msgstr "Сильный и подробный безопасности на уме ."
 
 #: app/templates/index.html:22
 msgid "Mobile first philosophy from bootstrap."
-msgstr ""
+msgstr "Мобильная первая философия от загрузки."
 
 #: app/templates/index.html:23
 msgid "Database highly configurable web CRUD, forms, charts and much more."
-msgstr ""
+msgstr "База данных настраиваемый веб CRUD , формы , схемы и многое другое."
 
 #: app/templates/index.html:26
 msgid "Star it"
-msgstr ""
+msgstr "Звезда его"
 
 #: app/templates/index.html:35
 msgid "Free and Open Source"
-msgstr ""
+msgstr "Свободное и открытое программное"
 
 #: app/templates/index.html:36
 msgid ""
@@ -82,33 +74,37 @@ msgid ""
 "questions, propose new features, report bugs. You can browse the code "
 "freely on github."
 msgstr ""
+"Используйте ее так, как вам нравится , это бесплатно для использования.
+вопросы , предложить новые функции , сообщить об ошибках . свободно на GitHub."
 
 #: app/templates/index.html:38
 msgid "Issues"
-msgstr ""
+msgstr "Вопросы"
 
 #: app/templates/index.html:47 app/templates/index.html:50
 msgid "Documentation"
-msgstr ""
+msgstr "документация"
 
 #: app/templates/index.html:48
 msgid ""
 "Every feature is documented with examples. API documentation is "
 "automatically generated from commented code."
 msgstr ""
+"Каждая функция документирована с примерами .
+"автоматически генерируется из прокомментировал кода."
 
 #: app/templates/index.html:59
 msgid "Live Demo"
-msgstr ""
+msgstr "Демо"
 
 #: app/templates/index.html:60
-msgid ""
+msgid
 "Login and get a hold on the quick how to example, with a simple contacts "
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
 msgstr ""
+"Вход на конференцию и получить в руки на панели быстрого , как пример , с простыми контактовприложение . Войти с помощью пользователя ' гость ' Пароль ' приветственный '"
 
 #: app/templates/index.html:62
 msgid "Login"
-msgstr ""
-
+msgstr "Войти"
