@@ -100,7 +100,7 @@ msgid ""
 "Login and get a hold on the quick how to example, with a simple contacts "
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
-msgstr "Loggen Sie sich ein und erhalten Sie einen Halt auf dem schnellen , wie man beispielsweise mit einem einfachen KontakteApp . melden Sie sich mit Benutzer \"Gast\" vergessen \"willkommen\""
+msgstr "Loggen Sie sich ein und erhalten Sie einen Halt auf dem schnellen , wie man beispielsweise mit einem einfachen KontakteApp . melden Sie sich mit Benutzer \"guest\" vergessen \"welcome\""
 
 #: app/templates/index.html:62
 msgid "Login"

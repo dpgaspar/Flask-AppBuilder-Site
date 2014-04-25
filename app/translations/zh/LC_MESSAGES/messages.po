@@ -108,7 +108,7 @@ msgid ""
 "Login and get a hold on the quick how to example, with a simple contacts "
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
-msgstr "登录并获得快速如何例如保持，用一个简单的接触应用程序。这将显示该框架的基本功能。随意使用用户登录'客人'密码'欢迎'"
+msgstr "登录并获得快速如何例如保持，用一个简单的接触应用程序。这将显示该框架的基本功能。随意使用用户登录'guest'密码'welcome'"
 
 #: app/templates/index.html:62
 msgid "Login"
