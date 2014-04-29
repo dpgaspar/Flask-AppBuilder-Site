@@ -103,7 +103,7 @@ msgid
 "app. This will show the basic features of the framework. Feel free to "
 "login using user 'guest' password 'welcome'"
 msgstr ""
-"Вход на конференцию и получить в руки на панели быстрого , как пример , с простыми контактовприложение . Войти с помощью пользователя ' гость ' Пароль ' приветственный '"
+"Вход на конференцию и получить в руки на панели быстрого , как пример , с простыми контактовприложение . Войти с помощью пользователя 'guest' Пароль 'welcome'"
 
 #: app/templates/index.html:62
 msgid "Login"
