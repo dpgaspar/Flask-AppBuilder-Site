@@ -1,3 +1,4 @@
+git add LICENSE
 git add *.py -A
 git add *.in -A
 git add *.cfg -A
@@ -9,7 +10,14 @@ git add *.md -A
 git add *.rst -A
 git add *.txt -A
 git add *.png -A
-git add ./app -A
+git add ./flask_appbuilder -A
+git add ./bin -A
 git add ./babel -A
+git add ./docs -A
+git add ./docs/_static -A
+git add ./examples -A
+git add ./tests -A
+git add .travis.yml
 git commit -m "$1"
-git push origin master
+git push origin $2
+
