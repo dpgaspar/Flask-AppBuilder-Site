@@ -10,7 +10,7 @@ git add *.md -A
 git add *.rst -A
 git add *.txt -A
 git add *.png -A
-git add ./flask_appbuilder -A
+git add ./app -A
 git add ./bin -A
 git add ./babel -A
 git add ./docs -A

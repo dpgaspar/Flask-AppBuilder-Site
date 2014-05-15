@@ -1,12 +1,11 @@
 from flask import render_template, redirect
-from flask.ext.appbuilder.baseapp import BaseApp
 from flask.ext.appbuilder.models.datamodel import SQLAModel
 from flask.ext.appbuilder.views import MasterDetailView, GeneralView, IndexView
 from flask.ext.appbuilder.baseviews import expose
 from flask.ext.appbuilder.charts.views import ChartView, TimeChartView
 from flask.ext.babelpkg import lazy_gettext as _
 
-from app import app, db
+from app import db, appbuilder
 from models import Group, Gender, Contact
 
 
@@ -110,31 +109,31 @@ class GroupMasterView(MasterDetailView):
 
 
 fill_gender()
-genapp = BaseApp(app, db, indexview=FABView)
-genapp.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
+appbuilder.set_index_view(FABView)
+appbuilder.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
                 category="Contacts", category_icon='fa-envelope', category_label=_('Contacts'))
-genapp.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o",
+appbuilder.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o",
                 label=_("Master Detail Groups"), category="Contacts")
-genapp.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope",
+appbuilder.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope",
                 label=_('List Contacts'), category="Contacts")
-genapp.add_separator("Contacts")
-genapp.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard",
+appbuilder.add_separator("Contacts")
+appbuilder.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard",
                 label=_('Contacts Chart'), category="Contacts")
-genapp.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard",
+appbuilder.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard",
                 label=_('Contacts Birth Chart'), category="Contacts")
 
-genapp.add_view_no_menu(ConfigView())
+appbuilder.add_view_no_menu(ConfigView())
 
-genapp.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
+appbuilder.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
                 category="Themes", category_label=_('Themes'))
-genapp.add_link(name="Amelia", href="/config/themes/amelia", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Flatly", href="/config/themes/flatly", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Journal", href="/config/themes/journal", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Readable", href="/config/themes/readable", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Simplex", href="/config/themes/simplex", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Slate", href="/config/themes/slate", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Spacelab", href="/config/themes/spacelab", icon="fa-external-link", category="Themes")
-genapp.add_link(name="United", href="/config/themes/united", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Default", href="/config/themes/default", icon="fa-external-link", category="Themes")
-genapp.add_link(name="Reverse Menu", href="/config/navreverse", icon="fa-external-link")
+appbuilder.add_link(name="Amelia", href="/config/themes/amelia", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Flatly", href="/config/themes/flatly", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Journal", href="/config/themes/journal", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Readable", href="/config/themes/readable", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Simplex", href="/config/themes/simplex", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Slate", href="/config/themes/slate", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Spacelab", href="/config/themes/spacelab", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="United", href="/config/themes/united", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Default", href="/config/themes/default", icon="fa-external-link", category="Themes")
+appbuilder.add_link(name="Reverse Menu", href="/config/navreverse", icon="fa-external-link")
 
