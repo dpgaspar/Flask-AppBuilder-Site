@@ -1,7 +1,7 @@
 from flask import render_template, redirect
 from flask.ext.appbuilder.models.datamodel import SQLAModel
-from flask.ext.appbuilder.views import MasterDetailView, GeneralView, IndexView
-from flask.ext.appbuilder.baseviews import expose
+from flask.ext.appbuilder.views import MasterDetailView, GeneralView
+from flask.ext.appbuilder.baseviews import expose, BaseView
 from flask.ext.appbuilder.charts.views import ChartView, TimeChartView
 from flask.ext.babelpkg import lazy_gettext as _
 
@@ -18,24 +18,8 @@ def fill_gender():
         db.session.rollback()
 
 
-class FABView(IndexView):
-    """
-        A simple view that implements the index for the site
-    """
-    index_template = 'index.html'
-
-
-class ContactUsView(IndexView):
-    route_base = "/contacts"
-    index_template = 'contactus.html'
-
-    @expose('/')
-    def index(self):
-        return render_template(self.index_template, baseapp=self.baseapp)
-
-
 class ContactGeneralView(GeneralView):
-    datamodel = SQLAModel(Contact, db.session)
+    datamodel = SQLAModel(Contact)
 
     label_columns = {'group': 'Contacts Group'}
     list_columns = ['name', 'personal_celphone', 'birthday', 'group']
@@ -68,7 +52,7 @@ class ContactChartView(ChartView):
     chart_title = 'Grouped contacts'
     label_columns = ContactGeneralView.label_columns
     group_by_columns = ['group', 'gender']
-    datamodel = SQLAModel(Contact, db.session)
+    datamodel = SQLAModel(Contact)
 
 
 class ContactTimeChartView(TimeChartView):
@@ -76,16 +60,16 @@ class ContactTimeChartView(TimeChartView):
     chart_type = 'AreaChart'
     label_columns = ContactGeneralView.label_columns
     group_by_columns = ['birthday']
-    datamodel = SQLAModel(Contact, db.session)
+    datamodel = SQLAModel(Contact)
 
 
 class GroupGeneralView(GeneralView):
-    datamodel = SQLAModel(Group, db.session)
+    datamodel = SQLAModel(Group)
     related_views = [ContactGeneralView]
     #show_template = 'appbuilder/general/model/show_cascade.html'
 
 
-class ConfigView(IndexView):
+class ConfigView(BaseView):
     route_base = "/config"
 
     @expose('/themes/<string:theme>')
@@ -103,26 +87,25 @@ class ConfigView(IndexView):
 
 
 class GroupMasterView(MasterDetailView):
-    datamodel = SQLAModel(Group, db.session)
+    datamodel = SQLAModel(Group)
     related_views = [ContactGeneralView]
 
 
 
 fill_gender()
-appbuilder.set_index_view(FABView)
-appbuilder.add_view(GroupGeneralView(), "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
+appbuilder.add_view(GroupGeneralView, "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
                 category="Contacts", category_icon='fa-envelope', category_label=_('Contacts'))
-appbuilder.add_view(GroupMasterView(), "Master Detail Groups", icon="fa-folder-open-o",
+appbuilder.add_view(GroupMasterView, "Master Detail Groups", icon="fa-folder-open-o",
                 label=_("Master Detail Groups"), category="Contacts")
-appbuilder.add_view(ContactGeneralView(), "List Contacts", icon="fa-envelope",
+appbuilder.add_view(ContactGeneralView, "List Contacts", icon="fa-envelope",
                 label=_('List Contacts'), category="Contacts")
 appbuilder.add_separator("Contacts")
-appbuilder.add_view(ContactChartView(), "Contacts Chart", icon="fa-dashboard",
+appbuilder.add_view(ContactChartView, "Contacts Chart", icon="fa-dashboard",
                 label=_('Contacts Chart'), category="Contacts")
-appbuilder.add_view(ContactTimeChartView(), "Contacts Birth Chart", icon="fa-dashboard",
+appbuilder.add_view(ContactTimeChartView, "Contacts Birth Chart", icon="fa-dashboard",
                 label=_('Contacts Birth Chart'), category="Contacts")
 
-appbuilder.add_view_no_menu(ConfigView())
+appbuilder.add_view_no_menu(ConfigView)
 
 appbuilder.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
                 category="Themes", category_label=_('Themes'))

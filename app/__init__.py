@@ -4,6 +4,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.appbuilder import AppBuilder
 from sqlalchemy.engine import Engine
 from sqlalchemy import event
+from indexview import FABView
 
 logging.basicConfig(format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 logging.getLogger().setLevel(logging.DEBUG)
@@ -11,7 +12,7 @@ logging.getLogger().setLevel(logging.DEBUG)
 app = Flask(__name__)
 app.config.from_object('config')
 db = SQLAlchemy(app)
-appbuilder = AppBuilder(app, db)
+appbuilder = AppBuilder(app, db, indexview=FABView)
 
 
 """
