@@ -1,7 +1,6 @@
 import logging
 from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.appbuilder import AppBuilder
+from flask.ext.appbuilder import AppBuilder, SQLA
 from sqlalchemy.engine import Engine
 from sqlalchemy import event
 from indexview import FABView
@@ -11,8 +10,8 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 app = Flask(__name__)
 app.config.from_object('config')
-db = SQLAlchemy(app)
-appbuilder = AppBuilder(app, db, indexview=FABView)
+db = SQLA(app)
+appbuilder = AppBuilder(app, db.session, indexview=FABView)
 
 
 """
