@@ -24,5 +24,10 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
     cursor.close()
     
 
-from app import views
+from app import views, data
+
+db.create_all()
+data.fill_gender()
+data.fill_data()
+
 
