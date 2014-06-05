@@ -89,14 +89,19 @@ class GroupMasterView(MasterDetailView):
 def pretty_month_year(value):
     return calendar.month_name[value.month] + ' ' + str(value.year)
 
+def pretty_year(value):
+    return str(value.year)
+
+
 class CountryStatsModelView(ModelView):
     datamodel = SQLAModel(CountryStats)
     list_columns = ['country', 'stat_date', 'population', 'unemployed', 'college']
     base_permissions = ['can_list', 'can_show']
 
+
 class CountryDirectChartView(DirectByChartView):
     datamodel = SQLAModel(CountryStats)
-    chart_title = 'Direct Data'
+    chart_title = 'Direct Data Chart Example'
 
     definitions = [
         {
@@ -110,7 +115,7 @@ class CountryDirectChartView(DirectByChartView):
 
 class CountryGroupByChartView(GroupByChartView):
     datamodel = SQLAModel(CountryStats)
-    chart_title = 'Statistics'
+    chart_title = 'Grouped Data Example'
 
     definitions = [
         {
@@ -122,9 +127,18 @@ class CountryGroupByChartView(GroupByChartView):
             ]
         },
         {
-            #'label': 'Monthly',
+            'label': 'Monthly',
             'group': 'month_year',
             'formatter': pretty_month_year,
+            'series': [(aggregate_sum, 'unemployed'),
+                       (aggregate_avg, 'population'),
+                       (aggregate_avg, 'college')
+            ]
+        },
+        {
+            'label': 'Yearly',
+            'group': 'year',
+            'formatter': pretty_year,
             'series': [(aggregate_sum, 'unemployed'),
                        (aggregate_avg, 'population'),
                        (aggregate_avg, 'college')
@@ -132,6 +146,26 @@ class CountryGroupByChartView(GroupByChartView):
         }
     ]
 
+
+class CountryPieGroupByChartView(GroupByChartView):
+    datamodel = SQLAModel(CountryStats)
+    chart_title = 'Grouped Data Example (Pie)'
+    chart_type = 'PieChart'
+
+    definitions = [
+        {
+            'label': 'Country Stat',
+            'group': 'country',
+            'series': [(aggregate_avg, 'unemployed')
+            ]
+        }
+    ]
+
+
+class MasterGroupByChartView(MasterDetailView):
+    datamodel = SQLAModel(Country)
+    base_order = ('name','asc')
+    related_views = [CountryDirectChartView]
 
 
 appbuilder.add_view(GroupModelView, "List Groups", icon="fa-folder-open-o", label=_('List Groups'),
@@ -151,8 +185,12 @@ appbuilder.add_view(CountryStatsModelView, "Chart Data (Country)", icon="fa-glob
                 label=_('Chart Data (Country)'), category_icon="fa-dashboard", category="Chart Examples")
 appbuilder.add_view(CountryDirectChartView, "Direct Chart Example", icon="fa-bar-chart-o",
                 label=_('Direct Chart Example'), category="Chart Examples")
+appbuilder.add_view(MasterGroupByChartView, "Master Chart Example", icon="fa-bar-chart-o",
+                label=_('Master Detail Chart Example'), category="Chart Examples")
 appbuilder.add_view(CountryGroupByChartView, "Group By Chart Example", icon="fa-bar-chart-o",
                 label=_('Group By Chart Example'), category="Chart Examples")
+appbuilder.add_view(CountryPieGroupByChartView, "Group By Pie Chart Example", icon="fa-bar-chart-o",
+                label=_('Group By Pie Chart Example'), category="Chart Examples")
 
 
 appbuilder.add_view_no_menu(ConfigView)

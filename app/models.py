@@ -64,3 +64,5 @@ class CountryStats(Model):
     def month_year(self):
         return datetime.datetime(self.stat_date.year, self.stat_date.month, 1)
 
+    def year(self):
+        return datetime.datetime(self.stat_date.year,1, 1)
