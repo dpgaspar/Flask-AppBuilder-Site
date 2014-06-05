@@ -1,10 +1,10 @@
 import calendar
 from flask import render_template, redirect
 from flask.ext.appbuilder.models.datamodel import SQLAModel
-from flask.ext.appbuilder.models.group import aggregate_avg, aggregate_sum
+from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
 from flask.ext.appbuilder.views import MasterDetailView, ModelView
 from flask.ext.appbuilder.baseviews import expose, BaseView
-from flask.ext.appbuilder.charts.views import ChartView, TimeChartView, DirectByChartView, GroupByChartView
+from flask.ext.appbuilder.charts.views import DirectByChartView, GroupByChartView
 from flask.ext.babelpkg import lazy_gettext as _
 
 from app import db, appbuilder
@@ -41,19 +41,49 @@ class ContactModelView(ModelView):
     ]
 
 
-class ContactChartView(ChartView):
+class ContactChartView(GroupByChartView):
+    datamodel = SQLAModel(Contact)
     chart_title = 'Grouped contacts'
     label_columns = ContactModelView.label_columns
-    group_by_columns = ['group', 'gender']
+    chart_type = 'PieChart'
+
+    definitions = [
+        {
+            'group' : 'group',
+            'series' : [(aggregate_count,'group')]
+        },
+        {
+            'group' : 'gender',
+            'series' : [(aggregate_count,'group')]
+        }
+    ]
+
+
+def pretty_month_year(value):
+    return calendar.month_name[value.month] + ' ' + str(value.year)
+
+def pretty_year(value):
+    return str(value.year)
+
+
+class ContactTimeChartView(GroupByChartView):
     datamodel = SQLAModel(Contact)
 
-
-class ContactTimeChartView(TimeChartView):
     chart_title = 'Grouped Birth contacts'
     chart_type = 'AreaChart'
     label_columns = ContactModelView.label_columns
-    group_by_columns = ['birthday']
-    datamodel = SQLAModel(Contact)
+    definitions = [
+        {
+            'group' : 'month_year',
+            'formatter': pretty_month_year,
+            'series': [(aggregate_count,'group')]
+        },
+        {
+            'group': 'year',
+            'formatter': pretty_year,
+            'series': [(aggregate_count,'group')]
+        }
+    ]
 
 
 class GroupModelView(ModelView):

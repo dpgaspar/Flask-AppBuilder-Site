@@ -36,6 +36,13 @@ class Contact(Model):
     def __repr__(self):
         return self.name
 
+    def month_year(self):
+        return datetime.datetime(self.birthday.year, self.birthday.month, 1)
+
+    def year(self):
+        return datetime.datetime(self.birthday.year, 1, 1)
+
+
 #----------------------------------------------------------
 #  Chart Views Example
 #----------------------------------------------------------
