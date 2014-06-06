@@ -137,8 +137,7 @@ class CountryDirectChartView(DirectByChartView):
         {
             #'label': 'Monthly',
             'group': 'stat_date',
-            'series': ['unemployed',
-                       'college']
+            'series': ['unemployed']
         }
     ]
 
