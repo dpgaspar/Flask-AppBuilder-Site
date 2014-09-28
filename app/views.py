@@ -1,6 +1,7 @@
 import calendar
 from flask import render_template, redirect
 from flask.ext.appbuilder.models.datamodel import SQLAModel
+from flask.ext.appbuilder.actions import action
 from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
 from flask.ext.appbuilder.views import MasterDetailView, ModelView
 from flask.ext.appbuilder.baseviews import expose, BaseView
@@ -39,6 +40,12 @@ class ContactModelView(ModelView):
             'Personal Info',
             {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
     ]
+
+    @action("muldelete", "Delete", "Delete all Really?", "fa-rocket", single=False)
+    def muldelete(self, items):
+        self.datamodel.delete_all(items)
+        self.update_redirect()
+        return redirect(self.get_redirect())
 
 
 class ContactChartView(GroupByChartView):
@@ -221,7 +228,7 @@ appbuilder.add_view(CountryGroupByChartView, "Group By Chart Example", icon="fa-
 appbuilder.add_view(CountryPieGroupByChartView, "Group By Pie Chart Example", icon="fa-bar-chart-o",
                 label=_('Group By Pie Chart Example'), category="Chart Examples")
 
-
+"""
 appbuilder.add_view_no_menu(ConfigView)
 
 appbuilder.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
@@ -236,4 +243,4 @@ appbuilder.add_link(name="Spacelab", href="/config/themes/spacelab", icon="fa-ex
 appbuilder.add_link(name="United", href="/config/themes/united", icon="fa-external-link", category="Themes")
 appbuilder.add_link(name="Default", href="/config/themes/default", icon="fa-external-link", category="Themes")
 appbuilder.add_link(name="Reverse Menu", href="/config/navreverse", icon="fa-external-link")
-
+"""
