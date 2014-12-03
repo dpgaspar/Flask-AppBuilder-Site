@@ -43,23 +43,23 @@ msgstr "Kontakte Geburtshoroskop"
 
 #: app/views.py:221
 msgid "Chart Data (Country)"
-msgstr ""
+msgstr "Diagrammdaten (Land)"
 
 #: app/views.py:223
 msgid "Direct Chart Example"
-msgstr ""
+msgstr "Direkter Tabelle Beispiel"
 
 #: app/views.py:225
 msgid "Master Detail Chart Example"
-msgstr ""
+msgstr "Master -Detail -Diagramm Beispiel"
 
 #: app/views.py:227
 msgid "Group By Chart Example"
-msgstr ""
+msgstr "Gruppieren nach Diagramm Beispiel"
 
 #: app/views.py:229
 msgid "Group By Pie Chart Example"
-msgstr ""
+msgstr "Gruppieren nach Kreisdiagramm Beispiel"
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
@@ -73,6 +73,9 @@ msgid ""
 "Flask. includes detailed security, auto CRUD generation for your models, "
 "google charts and much more."
 msgstr ""
+"Einfache und schnelle Anwendungsentwicklung Rahmen , auf der Oberseite gebaut "
+"Flask. enthält detaillierte Sicherheit, Auto CRUD -Generierung für Ihre Modelle , "
+"google Charts und vieles mehr."
 
 #: app/templates/index.html:27 app/templates/index_copy.html:26
 msgid "Star it"
@@ -126,43 +129,43 @@ msgstr "Anmelden"
 
 #: app/templates/index.html:84
 msgid "Super fast development "
-msgstr ""
+msgstr "Super schnelle Entwicklung "
 
 #: app/templates/index.html:84
 msgid " Highly customizable"
-msgstr ""
+msgstr " Sehr individuell"
 
 #: app/templates/index.html:86
 msgid "Automatic menu generation."
-msgstr ""
+msgstr "Automatische Menüerstellung."
 
 #: app/templates/index.html:87
 msgid "Automatic CRUD generation."
-msgstr ""
+msgstr "Automatische CRUD Generation."
 
 #: app/templates/index.html:88
 msgid "Multiple actions on db records."
-msgstr ""
+msgstr "Mehrere Aktionen zu db records."
 
 #: app/templates/index.html:89
 msgid "Big variety of filters for your lists."
-msgstr ""
+msgstr "Große Auswahl an Filtern für Ihre Listen."
 
 #: app/templates/index.html:90
 msgid "Various view widgets: lists, master-detail, list of thumbnails etc"
-msgstr ""
+msgstr "Verschiedene Widgets Ansicht : Listen, Master-Detail , Liste von Miniaturansichten usw."
 
 #: app/templates/index.html:91
 msgid "Select2, Datepicker, DateTimePicker"
-msgstr ""
+msgstr "Select2, Datepicker, DateTimePicker"
 
 #: app/templates/index.html:92
 msgid "Google charts with automatic group by or direct values and filters."
-msgstr ""
+msgstr "Google charts mit automatischer Gruppe oder direkte Werte und Filter."
 
 #: app/templates/index.html:109
 msgid "Automatic permissions lookup, based on exposed methods."
-msgstr ""
+msgstr "Automatische Berechtigungen Lookup , basierend auf Methoden ausgesetzt."
 
 #: app/templates/index.html:110
 msgid ""
