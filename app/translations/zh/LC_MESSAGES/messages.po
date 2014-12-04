@@ -43,23 +43,23 @@ msgstr "联系方式出生图"
 
 #: app/views.py:221
 msgid "Chart Data (Country)"
-msgstr ""
+msgstr "图表数据（国家或地区)"
 
 #: app/views.py:223
 msgid "Direct Chart Example"
-msgstr ""
+msgstr "直接图表示例"
 
 #: app/views.py:225
 msgid "Master Detail Chart Example"
-msgstr ""
+msgstr "主从图表示例"
 
 #: app/views.py:227
 msgid "Group By Chart Example"
-msgstr ""
+msgstr "集团通过图表示例"
 
 #: app/views.py:229
 msgid "Group By Pie Chart Example"
-msgstr ""
+msgstr "集团通过饼图示例"
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
@@ -71,6 +71,9 @@ msgid ""
 "Flask. includes detailed security, auto CRUD generation for your models, "
 "google charts and much more."
 msgstr ""
+"简单，快速的应用程序开发框架，建立在之上"
+"瓶，包括详细的安全性，自动生成CRUD为您的模型， "
+"谷歌图表等等。"
 
 #: app/templates/index.html:27 app/templates/index_copy.html:26
 msgid "Star it"
@@ -119,31 +122,31 @@ msgstr "注册"
 
 #: app/templates/index.html:84
 msgid "Super fast development "
-msgstr ""
+msgstr "超快速发展 "
 
 #: app/templates/index.html:84
 msgid " Highly customizable"
-msgstr ""
+msgstr "高度可定制"
 
 #: app/templates/index.html:86
 msgid "Automatic menu generation."
-msgstr ""
+msgstr "自动菜单生成。"
 
 #: app/templates/index.html:87
 msgid "Automatic CRUD generation."
-msgstr ""
+msgstr "自动CRUD生成。"
 
 #: app/templates/index.html:88
 msgid "Multiple actions on db records."
-msgstr ""
+msgstr "对数据库记录多个动作。"
 
 #: app/templates/index.html:89
 msgid "Big variety of filters for your lists."
-msgstr ""
+msgstr "大多种滤镜为您列出。"
 
 #: app/templates/index.html:90
 msgid "Various view widgets: lists, master-detail, list of thumbnails etc"
-msgstr ""
+msgstr "各种视图控件：列表，主从，缩略图等名单"
 
 #: app/templates/index.html:91
 msgid "Select2, Datepicker, DateTimePicker"
@@ -151,71 +154,75 @@ msgstr ""
 
 #: app/templates/index.html:92
 msgid "Google charts with automatic group by or direct values and filters."
-msgstr ""
+msgstr "谷歌图表自动group by或直接价值和过滤器。"
 
 #: app/templates/index.html:107
 msgid "Ready to go Security "
-msgstr ""
+msgstr "准备去安全 "
 
 #: app/templates/index.html:107
 msgid "Fully granular"
-msgstr ""
+msgstr "充分颗粒状"
 
 #: app/templates/index.html:109
 msgid "Automatic permissions lookup, based on exposed methods."
-msgstr ""
+msgstr "自动查询权限的基础上，公开的方法。"
 
 #: app/templates/index.html:110
 msgid ""
 "Inserts on the Database all the detailed permissions possible on your "
 "application."
 msgstr ""
+"插入对数据库的所有详细的权限可能在你的"
+"应用程序"
 
 #: app/templates/index.html:111
 msgid "Public (no authentication needed) and Private permissions."
-msgstr ""
+msgstr "公众（不需要认证）及私人权限。"
 
 #: app/templates/index.html:112
 msgid "Role based permissions."
-msgstr ""
+msgstr "基于角色的权限。"
 
 #: app/templates/index.html:113
 msgid "Authentication support for OpenID, Database and LDAP."
-msgstr ""
+msgstr "身份验证支持 OpenID, Database, LDAP."
 
 #: app/templates/index.html:114
 msgid "Support for self user registration."
-msgstr ""
+msgstr "支持用于自用户注册。"
 
 #: app/templates/index.html:123
 msgid "Form Generation "
-msgstr ""
+msgstr "表单生成 "
 
 #: app/templates/index.html:123
 msgid " With full control"
-msgstr ""
+msgstr "完全控制"
 
 #: app/templates/index.html:125
 msgid "Automatic, Add, Edit and Show from Database Models."
-msgstr ""
+msgstr "自动，添加，编辑和数据库模型显示。"
 
 #: app/templates/index.html:126
 msgid "Labels and descriptions for each field."
-msgstr ""
+msgstr "标签和描述每个字段。"
 
 #: app/templates/index.html:127
 msgid "Automatic base validators from model's definition."
-msgstr ""
+msgstr "自动基地的校验模型的定义。"
 
 #: app/templates/index.html:128
 msgid ""
 "Custom validators, extra fields, custom filters for related dropdown "
 "lists."
 msgstr ""
+"自定义验证器，额外的字段，自定义过滤器相关下拉 "
+"名单。"
 
 #: app/templates/index.html:129
 msgid "Image and File support for upload and database field association"
-msgstr ""
+msgstr "上传和数据库字段的关联图像和文件支持"
 
 #: app/templates/index.html:130
 msgid "Field sets for Form's (Django style)."
@@ -223,15 +230,15 @@ msgstr ""
 
 #: app/templates/index.html:145
 msgid "Multi Language Support "
-msgstr ""
+msgstr "语言支持 "
 
 #: app/templates/index.html:145
 msgid " and more"
-msgstr ""
+msgstr "和更"
 
 #: app/templates/index.html:147
 msgid "Framework translations and your app translations merge."
-msgstr ""
+msgstr "框架翻译和您的应用程序翻译合并。"
 
 #: app/templates/index.html:148
 msgid "Bootstrap."
