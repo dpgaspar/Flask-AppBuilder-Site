@@ -74,6 +74,9 @@ msgid ""
 "Flask. includes detailed security, auto CRUD generation for your models, "
 "google charts and much more."
 msgstr ""
+"Простой и быстрый фреймворк для разработки приложений , построенный на вершине "
+"Колбу. Включает в себя подробную безопасности, автогенерацией CRUD для ваших моделей , "
+"Google карты и многое другое."
 
 #: app/templates/index.html:27 app/templates/index_copy.html:26
 msgid "Star it"
