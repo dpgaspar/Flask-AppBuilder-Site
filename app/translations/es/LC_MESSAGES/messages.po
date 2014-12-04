@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-12-03 07:59+0000\n"
+"POT-Creation-Date: 2014-12-04 18:52+0000\n"
 "PO-Revision-Date: 2014-04-18 00:37+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -43,23 +43,23 @@ msgstr "Gráfico de Contactos Nacimiento"
 
 #: app/views.py:221
 msgid "Chart Data (Country)"
-msgstr ""
+msgstr "Gráfico de Datos ( País )"
 
 #: app/views.py:223
 msgid "Direct Chart Example"
-msgstr ""
+msgstr "Gráfico Ejemplo Directo"
 
 #: app/views.py:225
 msgid "Master Detail Chart Example"
-msgstr ""
+msgstr "Master Detail Gráfico Ejemplo"
 
 #: app/views.py:227
 msgid "Group By Chart Example"
-msgstr ""
+msgstr "Agrupar por Chart Ejemplo"
 
 #: app/views.py:229
 msgid "Group By Pie Chart Example"
-msgstr ""
+msgstr "Agrupar por Pie Chart Ejemplo"
 
 #: app/templates/contacts.html:11
 msgid "Contact us with any questions you would like related with this project."
@@ -71,6 +71,9 @@ msgid ""
 "Flask. includes detailed security, auto CRUD generation for your models, "
 "google charts and much more."
 msgstr ""
+"Marco de desarrollo de la aplicación simple y rápida , construido en la "
+"cima de la Frasco. Incluye seguridad detallada , generación CRUD auto "
+"para sus modelos google gráficos y mucho más. "
 
 #: app/templates/index.html:27 app/templates/index_copy.html:26
 msgid "Star it"
@@ -128,107 +131,139 @@ msgstr "Inicio"
 
 #: app/templates/index.html:84
 msgid "Super fast development "
-msgstr ""
+msgstr "Desarrollo rápido estupendo"
 
 #: app/templates/index.html:84
 msgid " Highly customizable"
-msgstr ""
+msgstr "Altamente personalizable"
 
 #: app/templates/index.html:86
 msgid "Automatic menu generation."
-msgstr ""
+msgstr "Generación automática de menús."
 
 #: app/templates/index.html:87
 msgid "Automatic CRUD generation."
-msgstr ""
+msgstr "Generación automática CRUD."
 
 #: app/templates/index.html:88
 msgid "Multiple actions on db records."
-msgstr ""
+msgstr "Múltiples acciones en registros db."
 
 #: app/templates/index.html:89
 msgid "Big variety of filters for your lists."
-msgstr ""
+msgstr "Gran variedad de filtros para sus listas."
 
 #: app/templates/index.html:90
 msgid "Various view widgets: lists, master-detail, list of thumbnails etc"
 msgstr ""
+"Varios Vea los aparatos : listas, maestro-detalle , lista de miniaturas ,"
+" etc."
 
 #: app/templates/index.html:91
 msgid "Select2, Datepicker, DateTimePicker"
-msgstr ""
+msgstr "Select2, Datepicker, DateTimePicker"
 
 #: app/templates/index.html:92
 msgid "Google charts with automatic group by or direct values and filters."
-msgstr ""
+msgstr "Gráficos de Google con grupo automática o valores directos y filtros."
+
+#: app/templates/index.html:107
+msgid "Ready to go Security "
+msgstr "Listo para ir de Seguridad "
+
+#: app/templates/index.html:107
+msgid "Fully granular"
+msgstr "Totalmente granular"
 
 #: app/templates/index.html:109
 msgid "Automatic permissions lookup, based on exposed methods."
-msgstr ""
+msgstr "Permisos automáticas de búsqueda , basado en métodos expuestos."
 
 #: app/templates/index.html:110
 msgid ""
 "Inserts on the Database all the detailed permissions possible on your "
 "application."
 msgstr ""
+"Inserta en la base de datos de todos los permisos detallados posible en "
+"su application"
 
 #: app/templates/index.html:111
 msgid "Public (no authentication needed) and Private permissions."
-msgstr ""
+msgstr "Public (sin autenticación necesaria ) y permisos privados."
 
 #: app/templates/index.html:112
 msgid "Role based permissions."
-msgstr ""
+msgstr "Permisos basados ​​en funciones."
 
 #: app/templates/index.html:113
 msgid "Authentication support for OpenID, Database and LDAP."
-msgstr ""
+msgstr "El soporte de autenticación para OpenID, Database and LDAP."
 
 #: app/templates/index.html:114
 msgid "Support for self user registration."
-msgstr ""
+msgstr "Soporte para el inquilino usuario."
+
+#: app/templates/index.html:123
+msgid "Form Generation "
+msgstr "Formulario de Generación "
+
+#: app/templates/index.html:123
+msgid " With full control"
+msgstr "Con el control total"
 
 #: app/templates/index.html:125
 msgid "Automatic, Add, Edit and Show from Database Models."
-msgstr ""
+msgstr "Automático , añadir, editar y mostrar de modelos de bases de datos."
 
 #: app/templates/index.html:126
 msgid "Labels and descriptions for each field."
-msgstr ""
+msgstr "Las etiquetas y descripciones de cada campo."
 
 #: app/templates/index.html:127
 msgid "Automatic base validators from model's definition."
-msgstr ""
+msgstr "Automática de la base validadores de la definición de modelo."
 
 #: app/templates/index.html:128
 msgid ""
 "Custom validators, extra fields, custom filters for related dropdown "
 "lists."
 msgstr ""
+"Los validadores propios, campos adicionales, filtros personalizados para "
+"desplegable relacionado listas \""
 
 #: app/templates/index.html:129
 msgid "Image and File support for upload and database field association"
 msgstr ""
+"Imagen y archivos de soporte para upload y el campo de base de datos de "
+"la asociación"
 
 #: app/templates/index.html:130
 msgid "Field sets for Form's (Django style)."
-msgstr ""
+msgstr "Field sets para las formas (Django style)."
+
+#: app/templates/index.html:145
+msgid "Multi Language Support "
+msgstr "Soporte de idiomas "
+
+#: app/templates/index.html:145
+msgid " and more"
+msgstr "y mucho más"
 
 #: app/templates/index.html:147
 msgid "Framework translations and your app translations merge."
-msgstr ""
+msgstr "Traducciones framework y sus traducciones de aplicaciones fusionan."
 
 #: app/templates/index.html:148
 msgid "Bootstrap."
-msgstr ""
+msgstr "Bootstrap."
 
 #: app/templates/index.html:149
 msgid "Font Awesome Icons."
-msgstr ""
+msgstr "Font Awesome Icons."
 
 #: app/templates/index.html:150
 msgid "Selec2, Date Picker."
-msgstr ""
+msgstr "Selec2, Date Picker."
 
 #: app/templates/index_copy.html:19
 msgid ""

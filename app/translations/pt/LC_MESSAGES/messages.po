@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-12-03 07:59+0000\n"
+"POT-Creation-Date: 2014-12-04 18:52+0000\n"
 "PO-Revision-Date: 2014-04-18 00:37+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pt <LL@li.org>\n"
@@ -168,6 +168,14 @@ msgstr ""
 msgid "Google charts with automatic group by or direct values and filters."
 msgstr "Google charts com agrupamento automático ou de valores directos e filtros"
 
+#: app/templates/index.html:107
+msgid "Ready to go Security "
+msgstr "Segurança completa"
+
+#: app/templates/index.html:107
+msgid "Fully granular"
+msgstr "Completamente granular"
+
 #: app/templates/index.html:109
 msgid "Automatic permissions lookup, based on exposed methods."
 msgstr "Descoberta de permissões automáticas baseadas em métodos expostos."
@@ -193,6 +201,14 @@ msgstr "Suporte de Autenticação para OpenID, Database e LDAP."
 #: app/templates/index.html:114
 msgid "Support for self user registration."
 msgstr "Suporte para registo de utilizadores."
+
+#: app/templates/index.html:123
+msgid "Form Generation "
+msgstr "Geração de formulários"
+
+#: app/templates/index.html:123
+msgid " With full control"
+msgstr " Controlo total"
 
 #: app/templates/index.html:125
 msgid "Automatic, Add, Edit and Show from Database Models."
@@ -221,6 +237,14 @@ msgstr "Suporte para imagens e ficheiros para upload."
 #: app/templates/index.html:130
 msgid "Field sets for Form's (Django style)."
 msgstr "Field sets para formulários (Django style).\""
+
+#: app/templates/index.html:145
+msgid "Multi Language Support "
+msgstr " Suporte para traduções"
+
+#: app/templates/index.html:145
+msgid " and more"
+msgstr " e muito mais"
 
 #: app/templates/index.html:147
 msgid "Framework translations and your app translations merge."
@@ -264,4 +288,5 @@ msgstr ""
 
 #~ msgid "Themes"
 #~ msgstr "Temas"
+
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-12-03 07:59+0000\n"
+"POT-Creation-Date: 2014-12-04 18:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,6 +153,14 @@ msgstr ""
 msgid "Google charts with automatic group by or direct values and filters."
 msgstr ""
 
+#: app/templates/index.html:107
+msgid "Ready to go Security "
+msgstr ""
+
+#: app/templates/index.html:107
+msgid "Fully granular"
+msgstr ""
+
 #: app/templates/index.html:109
 msgid "Automatic permissions lookup, based on exposed methods."
 msgstr ""
@@ -179,6 +187,14 @@ msgstr ""
 msgid "Support for self user registration."
 msgstr ""
 
+#: app/templates/index.html:123
+msgid "Form Generation "
+msgstr ""
+
+#: app/templates/index.html:123
+msgid " With full control"
+msgstr ""
+
 #: app/templates/index.html:125
 msgid "Automatic, Add, Edit and Show from Database Models."
 msgstr ""
@@ -203,6 +219,14 @@ msgstr ""
 
 #: app/templates/index.html:130
 msgid "Field sets for Form's (Django style)."
+msgstr ""
+
+#: app/templates/index.html:145
+msgid "Multi Language Support "
+msgstr ""
+
+#: app/templates/index.html:145
+msgid " and more"
 msgstr ""
 
 #: app/templates/index.html:147
