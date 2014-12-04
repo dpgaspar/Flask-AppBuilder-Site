@@ -213,27 +213,27 @@ msgstr ""
 
 #: app/templates/index.html:129
 msgid "Image and File support for upload and database field association"
-msgstr ""
+msgstr "Bild und Datei Unterstützung für den Upload und Datenbankfeld Verband"
 
 #: app/templates/index.html:130
 msgid "Field sets for Form's (Django style)."
-msgstr ""
+msgstr "Field sets für Formen (Django style)."
 
 #: app/templates/index.html:147
 msgid "Framework translations and your app translations merge."
-msgstr ""
+msgstr "Rahmen Übersetzungen und Ihre app Übersetzungen verschmelzen."
 
 #: app/templates/index.html:148
 msgid "Bootstrap."
-msgstr ""
+msgstr "Bootstrap."
 
 #: app/templates/index.html:149
 msgid "Font Awesome Icons."
-msgstr ""
+msgstr "Font Awesome Icons."
 
 #: app/templates/index.html:150
 msgid "Selec2, Date Picker."
-msgstr ""
+msgstr "Selec2, Date Picker."
 
 #: app/templates/index_copy.html:19
 msgid ""
