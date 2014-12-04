@@ -281,7 +281,3 @@ msgstr "База данных настраиваемый веб CRUD , форм�
 
 #~ msgid "Themes"
 #~ msgstr "Темы"
-
-#~ msgid "From Generation "
-#~ msgstr ""
-
