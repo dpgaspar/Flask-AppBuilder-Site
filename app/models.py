@@ -6,6 +6,7 @@ from flask.ext.appbuilder import Model
 
 mindate = datetime.date(datetime.MINYEAR, 1, 1)
 
+
 class ContactGroup(Model):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), unique = True, nullable=False)

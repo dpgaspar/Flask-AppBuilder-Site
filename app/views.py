@@ -1,6 +1,6 @@
 import calendar
 from flask import render_template, redirect
-from flask.ext.appbuilder.models.datamodel import SQLAModel
+from flask.ext.appbuilder.models.sqla.interface import SQLAInterface
 from flask.ext.appbuilder.actions import action
 from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
 from flask.ext.appbuilder.views import MasterDetailView, ModelView
@@ -13,7 +13,7 @@ from models import ContactGroup, Gender, Contact, CountryStats, Country
 
 
 class ContactModelView(ModelView):
-    datamodel = SQLAModel(Contact)
+    datamodel = SQLAInterface(Contact)
 
     label_columns = {'contact_group.name': 'Contacts Group'}
     list_columns = ['name', 'personal_celphone', 'birthday', 'contact_group.name']
@@ -49,7 +49,7 @@ class ContactModelView(ModelView):
 
 
 class ContactChartView(GroupByChartView):
-    datamodel = SQLAModel(Contact)
+    datamodel = SQLAInterface(Contact)
     chart_title = 'Grouped contacts'
     label_columns = ContactModelView.label_columns
     chart_type = 'PieChart'
@@ -74,7 +74,7 @@ def pretty_year(value):
 
 
 class ContactTimeChartView(GroupByChartView):
-    datamodel = SQLAModel(Contact)
+    datamodel = SQLAInterface(Contact)
 
     chart_title = 'Grouped Birth contacts'
     chart_type = 'AreaChart'
@@ -94,7 +94,7 @@ class ContactTimeChartView(GroupByChartView):
 
 
 class GroupModelView(ModelView):
-    datamodel = SQLAModel(ContactGroup)
+    datamodel = SQLAInterface(ContactGroup)
     related_views = [ContactModelView]
     #show_template = 'appbuilder/general/model/show_cascade.html'
 
@@ -117,7 +117,7 @@ class ConfigView(BaseView):
 
 
 class GroupMasterView(MasterDetailView):
-    datamodel = SQLAModel(ContactGroup)
+    datamodel = SQLAInterface(ContactGroup)
     related_views = [ContactModelView]
 
 #-----------------------------------------------------
@@ -131,13 +131,13 @@ def pretty_year(value):
 
 
 class CountryStatsModelView(ModelView):
-    datamodel = SQLAModel(CountryStats)
+    datamodel = SQLAInterface(CountryStats)
     list_columns = ['country', 'stat_date', 'population', 'unemployed', 'college']
     base_permissions = ['can_list', 'can_show']
 
 
 class CountryDirectChartView(DirectByChartView):
-    datamodel = SQLAModel(CountryStats)
+    datamodel = SQLAInterface(CountryStats)
     chart_title = 'Direct Data Chart Example'
 
     definitions = [
@@ -150,7 +150,7 @@ class CountryDirectChartView(DirectByChartView):
 
 
 class CountryGroupByChartView(GroupByChartView):
-    datamodel = SQLAModel(CountryStats)
+    datamodel = SQLAInterface(CountryStats)
     chart_title = 'Grouped Data Example'
 
     definitions = [
@@ -184,7 +184,7 @@ class CountryGroupByChartView(GroupByChartView):
 
 
 class CountryPieGroupByChartView(GroupByChartView):
-    datamodel = SQLAModel(CountryStats)
+    datamodel = SQLAInterface(CountryStats)
     chart_title = 'Grouped Data Example (Pie)'
     chart_type = 'PieChart'
 
@@ -199,7 +199,7 @@ class CountryPieGroupByChartView(GroupByChartView):
 
 
 class MasterGroupByChartView(MasterDetailView):
-    datamodel = SQLAModel(Country)
+    datamodel = SQLAInterface(Country)
     base_order = ('name','asc')
     related_views = [CountryDirectChartView]
 
@@ -216,7 +216,6 @@ appbuilder.add_view(ContactChartView, "Contacts Chart", icon="fa-dashboard",
 appbuilder.add_view(ContactTimeChartView, "Contacts Birth Chart", icon="fa-dashboard",
                 label=_('Contacts Birth Chart'), category="Contacts")
 
-
 appbuilder.add_view(CountryStatsModelView, "Chart Data (Country)", icon="fa-globe",
                 label=_('Chart Data (Country)'), category_icon="fa-dashboard", category="Chart Examples")
 appbuilder.add_view(CountryDirectChartView, "Direct Chart Example", icon="fa-bar-chart-o",
@@ -227,20 +226,3 @@ appbuilder.add_view(CountryGroupByChartView, "Group By Chart Example", icon="fa-
                 label=_('Group By Chart Example'), category="Chart Examples")
 appbuilder.add_view(CountryPieGroupByChartView, "Group By Pie Chart Example", icon="fa-bar-chart-o",
                 label=_('Group By Pie Chart Example'), category="Chart Examples")
-
-"""
-appbuilder.add_view_no_menu(ConfigView)
-
-appbuilder.add_link(name="Cerulean", href="/config/themes/cerulean", icon="fa-external-link",
-                category="Themes", category_label=_('Themes'))
-appbuilder.add_link(name="Amelia", href="/config/themes/amelia", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Flatly", href="/config/themes/flatly", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Journal", href="/config/themes/journal", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Readable", href="/config/themes/readable", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Simplex", href="/config/themes/simplex", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Slate", href="/config/themes/slate", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Spacelab", href="/config/themes/spacelab", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="United", href="/config/themes/united", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Default", href="/config/themes/default", icon="fa-external-link", category="Themes")
-appbuilder.add_link(name="Reverse Menu", href="/config/navreverse", icon="fa-external-link")
-"""
