@@ -55,7 +55,7 @@ msgstr "Exemplo de gráfico Master Detail"
 
 #: app/views.py:227
 msgid "Group By Chart Example"
-msgstr "Exemplo de Gráfico agrupado"
+msgstr "Exemplo de gráfico agrupado"
 
 #: app/views.py:229
 msgid "Group By Pie Chart Example"

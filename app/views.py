@@ -157,9 +157,9 @@ class CountryGroupByChartView(GroupByChartView):
         {
             'label': 'Country Stat',
             'group': 'country',
-            'series': [(aggregate_avg, 'unemployed'),
-                       (aggregate_avg, 'population'),
-                       (aggregate_avg, 'college')
+            'series': [(aggregate_sum, 'unemployed'),
+                       (aggregate_sum, 'population'),
+                       (aggregate_sum, 'college')
             ]
         },
         {
@@ -167,8 +167,8 @@ class CountryGroupByChartView(GroupByChartView):
             'group': 'month_year',
             'formatter': pretty_month_year,
             'series': [(aggregate_sum, 'unemployed'),
-                       (aggregate_avg, 'population'),
-                       (aggregate_avg, 'college')
+                       (aggregate_sum, 'population'),
+                       (aggregate_sum, 'college')
             ]
         },
         {
@@ -176,8 +176,8 @@ class CountryGroupByChartView(GroupByChartView):
             'group': 'year',
             'formatter': pretty_year,
             'series': [(aggregate_sum, 'unemployed'),
-                       (aggregate_avg, 'population'),
-                       (aggregate_avg, 'college')
+                       (aggregate_sum, 'population'),
+                       (aggregate_sum, 'college')
             ]
         }
     ]
@@ -191,8 +191,8 @@ class CountryPieGroupByChartView(GroupByChartView):
     definitions = [
         {
             'label': 'Country Stat',
-            'group': 'country',
-            'series': [(aggregate_avg, 'unemployed')
+            'group': 'country.name',
+            'series': [(aggregate_sum, 'unemployed')
             ]
         }
     ]
