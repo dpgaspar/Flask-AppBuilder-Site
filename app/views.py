@@ -56,11 +56,11 @@ class ContactChartView(GroupByChartView):
 
     definitions = [
         {
-            'group' : 'contact_group',
+            'group' : 'contact_group.name',
             'series' : [(aggregate_count,'contact_group')]
         },
         {
-            'group' : 'gender',
+            'group' : 'gender.name',
             'series' : [(aggregate_count,'contact_group')]
         }
     ]
@@ -156,7 +156,7 @@ class CountryGroupByChartView(GroupByChartView):
     definitions = [
         {
             'label': 'Country Stat',
-            'group': 'country',
+            'group': 'country.name',
             'series': [(aggregate_sum, 'unemployed'),
                        (aggregate_sum, 'population'),
                        (aggregate_sum, 'college')
