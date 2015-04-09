@@ -1,0 +1,14 @@
+{% extends 'appbuilder/baselayout.html' %}
+
+{% block head_css %}
+    {{ super() }}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+{% endblock %}
+
+{% block head_js %}
+    {{ super() }}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+{% endblock %}
+
+

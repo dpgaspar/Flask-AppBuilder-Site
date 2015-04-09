@@ -1,0 +1,26 @@
+{% extends 'appbuilder/general/charts/chart.html' %}
+
+{% block content scoped %}
+    {% call lib.accordion_tag(view.__class__.__name__,"Python code needed using F.A.B.", False) %}
+    <pre><code class="py">
+class ContactChartView(GroupByChartView):
+    datamodel = SQLAInterface(Contact)
+    chart_title = 'Grouped contacts'
+    label_columns = ContactModelView.label_columns
+    chart_type = 'PieChart'
+
+    definitions = [
+        {
+            'group' : 'contact_group.name',
+            'series' : [(aggregate_count,'contact_group')]
+        },
+        {
+            'group' : 'gender.name',
+            'series' : [(aggregate_count,'contact_group')]
+        }
+    ]
+    </code></pre>
+    {% endcall %}
+    {{ super() }}
+
+{% endblock %}

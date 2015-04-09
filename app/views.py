@@ -17,7 +17,7 @@ class ContactModelView(ModelView):
 
     label_columns = {'contact_group.name': 'Contacts Group'}
     list_columns = ['name', 'personal_celphone', 'birthday', 'contact_group.name']
-
+    list_template = 'contact.html'
     base_order = ('name', 'asc')
 
     show_fieldsets = [
@@ -27,19 +27,9 @@ class ContactModelView(ModelView):
             {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
     ]
 
-    add_fieldsets = [
-        ('Summary', {'fields': ['name', 'gender', 'contact_group']}),
-        (
-            'Personal Info',
-            {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
-    ]
+    add_fieldsets = show_fieldsets
 
-    edit_fieldsets = [
-        ('Summary', {'fields': ['name', 'gender', 'contact_group']}),
-        (
-            'Personal Info',
-            {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
-    ]
+    edit_fieldsets = show_fieldsets
 
     @action("muldelete", "Delete", "Delete all Really?", "fa-rocket", single=False)
     def muldelete(self, items):
@@ -53,6 +43,7 @@ class ContactChartView(GroupByChartView):
     chart_title = 'Grouped contacts'
     label_columns = ContactModelView.label_columns
     chart_type = 'PieChart'
+    chart_template = 'contactChart.html'
 
     definitions = [
         {
@@ -96,24 +87,8 @@ class ContactTimeChartView(GroupByChartView):
 class GroupModelView(ModelView):
     datamodel = SQLAInterface(ContactGroup)
     related_views = [ContactModelView]
+    list_template = 'contact_group.html'
     #show_template = 'appbuilder/general/model/show_cascade.html'
-
-
-class ConfigView(BaseView):
-    route_base = "/config"
-
-    @expose('/themes/<string:theme>')
-    def index(self, theme=''):
-        if theme == "default":
-            self.appbuilder.app_theme = ''
-        else:
-            self.appbuilder.app_theme = "%s.css" % (theme)
-        return redirect(self._get_redirect())
-
-    @expose('/navreverse/')
-    def navreverse(self):
-        self.appbuilder.menu.reverse = not self.appbuilder.menu.reverse
-        return redirect(self._get_redirect())
 
 
 class GroupMasterView(MasterDetailView):
