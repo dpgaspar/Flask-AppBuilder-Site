@@ -43,7 +43,6 @@ class ContactChartView(GroupByChartView):
     chart_title = 'Grouped contacts'
     label_columns = ContactModelView.label_columns
     chart_type = 'PieChart'
-    chart_template = 'contactChart.html'
 
     definitions = [
         {

@@ -1,5 +1,5 @@
 <!-- extend base layout -->
-{% extends "appbuilder/base.html" %}
+{% extends "index_base.html" %}
 
 {% block head_css %}
         {{ super() }}
@@ -77,10 +77,8 @@
 
 </div>
 
-<hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8">
+      <div class="row" style="background:url('static/img/polaroid.png')">
+        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
           <h2 class="featurette-heading">{{_("Super fast development ")}}<span class="text-muted">{{_(" Highly customizable")}}</span></h2>
             <ul>
           <li class="lead tight">{{_("Automatic menu generation.")}}</li>
@@ -92,18 +90,16 @@
         <li class="lead tight">{{_("Google charts with automatic group by or direct values and filters.")}}</li>
                 </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
           <h1><i class="fa fa-bolt fa-5x"></i></h1>
         </div>
       </div>
 
-<hr class="featurette-divider">
-
-      <div class="row featurette">
-          <div class="col-md-4">
+      <div class="row" style="background:url('static/img/fabric_1.png')">
+          <div class="col-md-3 col-md-offset-1 col-xs-offset-1 ">
            <h1><i class="fa fa-lock fa-5x"></i></h1>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
             <h2 class="featurette-heading">{{_("Ready to go Security ")}}<span class="text-muted">{{_(" Fully granular")}}</span></h2>
           <ul>
             <li class="lead tight">{{_("Automatic permissions lookup, based on exposed methods.")}}</li>
@@ -116,10 +112,8 @@
         </div>
       </div>
 
-<hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-8">
+      <div class="row featurette" style="background:url('static/img/old_moon.png')">
+        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
           <h2 class="featurette-heading">{{_("Form Generation ")}}<span class="text-muted">{{_(" With full control")}}</span></h2>
         <ul>
             <li class="lead tight">{{_("Automatic, Add, Edit and Show from Database Models.")}}</li>
@@ -130,18 +124,16 @@
             <li class="lead tight">{{_("Field sets for Form's (Django style).")}}</li>
         </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
           <h1><i class="fa fa-list-alt fa-5x"></i></h1>
         </div>
       </div>
 
-        <hr class="featurette-divider">
-
-      <div class="row featurette">
-          <div class="col-md-4">
+       <div class="row" style="background:url('static/img/green_cup.png')">
+          <div class="col-md-3 col-md-offset-1 col-xs-offset-1">
            <h1><i class="fa fa-cog fa-5x"></i></h1>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
             <h2 class="featurette-heading">{{_("Multi Language Support ")}}<span class="text-muted">{{_(" and more")}}</span></h2>
           <ul>
             <li class="lead tight">{{_("Framework translations and your app translations merge.")}}</li>
