@@ -1,0 +1,13 @@
+{% extends 'appbuilder/general/model/edit.html' %}
+
+{% block content %}
+    {% call lib.accordion_tag(view.__class__.__name__,"Python code needed using F.A.B.", False) %}
+    <pre><code class="py">
+class GroupModelView(ModelView):
+    datamodel = SQLAInterface(ContactGroup)
+    related_views = [ContactModelView, ContactItemModelView, ContactThumbnailModelView, ContactBlockModelView]
+    </code></pre>
+    {% endcall %}
+    {{ super() }}
+
+{% endblock %}
