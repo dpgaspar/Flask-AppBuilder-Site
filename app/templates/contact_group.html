@@ -5,7 +5,7 @@
     <pre><code class="py">
 class GroupModelView(ModelView):
     datamodel = SQLAInterface(ContactGroup)
-    related_views = [ContactModelView]
+    related_views = [ContactModelView, ContactItemModelView, ContactThumbnailModelView, ContactBlockModelView]
     </code></pre>
     {% endcall %}
     {{ super() }}

@@ -1,6 +1,7 @@
 import calendar
 from flask import render_template, redirect
 from flask.ext.appbuilder.models.sqla.interface import SQLAInterface
+from flask.ext.appbuilder.widgets import ListThumbnail, ListWidget, ListItem, ListBlock, ShowBlockWidget, ListLinkWidget
 from flask.ext.appbuilder.actions import action
 from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
 from flask.ext.appbuilder.views import MasterDetailView, ModelView
@@ -37,6 +38,34 @@ class ContactModelView(ModelView):
         self.update_redirect()
         return redirect(self.get_redirect())
 
+class ContactItemModelView(ContactModelView):
+    list_title = 'List Contact (Items)'
+    list_widget = ListItem
+
+
+class ContactThumbnailModelView(ContactModelView):
+    list_title = 'List Contact (Thumbnails)'
+    list_widget = ListThumbnail
+
+
+class ContactBlockModelView(ContactModelView):
+    list_title = 'List Contact (Blocks)'
+    list_widget = ListBlock
+    show_widget = ShowBlockWidget
+
+
+class ContactLinkModelView(ContactModelView):
+    list_title = 'List Contact (Links)'
+    list_widget = ListLinkWidget
+
+
+class GroupModelView(ModelView):
+    datamodel = SQLAInterface(ContactGroup)
+    related_views = [ContactModelView, ContactItemModelView, ContactThumbnailModelView, ContactBlockModelView, ]
+    list_template = 'contact_group.html'
+    add_template = 'contact_group_add.html'
+    edit_template = 'contact_group_edit.html'
+    show_template = 'contact_group_show.html'
 
 class ContactChartView(GroupByChartView):
     datamodel = SQLAInterface(Contact)
@@ -81,13 +110,6 @@ class ContactTimeChartView(GroupByChartView):
             'series': [(aggregate_count,'contact_group')]
         }
     ]
-
-
-class GroupModelView(ModelView):
-    datamodel = SQLAInterface(ContactGroup)
-    related_views = [ContactModelView]
-    list_template = 'contact_group.html'
-    #show_template = 'appbuilder/general/model/show_cascade.html'
 
 
 class GroupMasterView(MasterDetailView):
@@ -184,6 +206,12 @@ appbuilder.add_view(GroupMasterView, "Master Detail Groups", icon="fa-folder-ope
                 label=_("Master Detail Groups"), category="Contacts")
 appbuilder.add_view(ContactModelView, "List Contacts", icon="fa-envelope",
                 label=_('List Contacts'), category="Contacts")
+
+appbuilder.add_view(ContactLinkModelView, "List Links Contacts", icon="fa-envelope", category="Contacts")
+appbuilder.add_view(ContactItemModelView, "List Item Contacts", icon="fa-envelope", category="Contacts")
+appbuilder.add_view(ContactBlockModelView, "List Block Contacts", icon="fa-envelope", category="Contacts")
+appbuilder.add_view(ContactThumbnailModelView, "List Thumb Contacts", icon="fa-envelope", category="Contacts")
+
 appbuilder.add_separator("Contacts")
 appbuilder.add_view(ContactChartView, "Contacts Chart", icon="fa-dashboard",
                 label=_('Contacts Chart'), category="Contacts")
