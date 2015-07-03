@@ -1,0 +1,39 @@
+{% extends 'appbuilder/general/model/list.html' %}
+
+{% block content %}
+    {% call lib.accordion_tag(view.__class__.__name__,"Python code needed using F.A.B.", False) %}
+    <pre><code class="py">
+"""
+    Example using ListItem for list widget
+"""
+class ContactModelView(ModelView):
+    datamodel = SQLAInterface(Contact)
+
+    label_columns = {'contact_group.name': 'Contacts Group'}
+    list_columns = ['name', 'personal_celphone', 'birthday', 'contact_group.name']
+    list_widget = ListItem
+    list_template = 'contact_item.html'
+    base_order = ('name', 'asc')
+
+    show_fieldsets = [
+        ('Summary', {'fields': ['name', 'gender', 'contact_group']}),
+        (
+            'Personal Info',
+            {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
+    ]
+
+    add_fieldsets = show_fieldsets
+
+    edit_fieldsets = show_fieldsets
+
+    @action("muldelete", "Delete", "Delete all Really?", "fa-rocket", single=False)
+    def muldelete(self, items):
+        self.datamodel.delete_all(items)
+        self.update_redirect()
+        return redirect(self.get_redirect())
+
+    </code></pre>
+    {% endcall %}
+    {{ super() }}
+
+{% endblock %}
