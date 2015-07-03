@@ -41,22 +41,23 @@ class ContactModelView(ModelView):
 class ContactItemModelView(ContactModelView):
     list_title = 'List Contact (Items)'
     list_widget = ListItem
-
+    list_template = 'contact_item.html'
 
 class ContactThumbnailModelView(ContactModelView):
     list_title = 'List Contact (Thumbnails)'
     list_widget = ListThumbnail
-
+    list_template = 'contact_thumbnail.html'
 
 class ContactBlockModelView(ContactModelView):
     list_title = 'List Contact (Blocks)'
     list_widget = ListBlock
     show_widget = ShowBlockWidget
-
+    list_template = 'contact_block.html'
 
 class ContactLinkModelView(ContactModelView):
     list_title = 'List Contact (Links)'
     list_widget = ListLinkWidget
+    list_template = 'contact_link.html'
 
 
 class GroupModelView(ModelView):
