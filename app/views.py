@@ -7,7 +7,7 @@ from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, ag
 from flask.ext.appbuilder.views import MasterDetailView, ModelView
 from flask.ext.appbuilder.baseviews import expose, BaseView
 from flask.ext.appbuilder.charts.views import DirectByChartView, GroupByChartView
-from flask.ext.babelpkg import lazy_gettext as _
+from flask.ext.babel import lazy_gettext as _
 
 from app import db, appbuilder
 from models import ContactGroup, Gender, Contact, CountryStats, Country
