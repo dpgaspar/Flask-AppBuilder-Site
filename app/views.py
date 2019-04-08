@@ -1,16 +1,17 @@
 import calendar
 from flask import render_template, redirect
-from flask.ext.appbuilder.models.sqla.interface import SQLAInterface
-from flask.ext.appbuilder.widgets import ListThumbnail, ListWidget, ListItem, ListBlock, ShowBlockWidget, ListLinkWidget
-from flask.ext.appbuilder.actions import action
-from flask.ext.appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
-from flask.ext.appbuilder.views import MasterDetailView, ModelView
-from flask.ext.appbuilder.baseviews import expose, BaseView
-from flask.ext.appbuilder.charts.views import DirectByChartView, GroupByChartView
-from flask.ext.babel import lazy_gettext as _
+from flask_appbuilder.models.sqla.interface import SQLAInterface
+from flask_appbuilder.widgets import ListThumbnail, ListWidget, \
+    ListItem, ListBlock, ShowBlockWidget, ListLinkWidget
+from flask_appbuilder.actions import action
+from flask_appbuilder.models.group import aggregate_count, aggregate_avg, aggregate_sum
+from flask_appbuilder.views import MasterDetailView, ModelView
+from flask_appbuilder.baseviews import expose, BaseView
+from flask_appbuilder.charts.views import DirectByChartView, GroupByChartView
+from flask_babel import lazy_gettext as _
 
-from app import db, appbuilder
-from models import ContactGroup, Gender, Contact, CountryStats, Country
+from . import db, appbuilder
+from .models import ContactGroup, Gender, Contact, CountryStats, Country
 
 
 class ContactModelView(ModelView):
@@ -25,7 +26,12 @@ class ContactModelView(ModelView):
         ('Summary', {'fields': ['name', 'gender', 'contact_group']}),
         (
             'Personal Info',
-            {'fields': ['address', 'birthday', 'personal_phone', 'personal_celphone'], 'expanded': False}),
+            {'fields': [
+                'address',
+                'birthday',
+                'personal_phone',
+                'personal_celphone'
+            ], 'expanded': False}),
     ]
 
     add_fieldsets = show_fieldsets
@@ -38,21 +44,25 @@ class ContactModelView(ModelView):
         self.update_redirect()
         return redirect(self.get_redirect())
 
+
 class ContactItemModelView(ContactModelView):
     list_title = 'List Contact (Items)'
     list_widget = ListItem
     list_template = 'contact_item.html'
+
 
 class ContactThumbnailModelView(ContactModelView):
     list_title = 'List Contact (Thumbnails)'
     list_widget = ListThumbnail
     list_template = 'contact_thumbnail.html'
 
+
 class ContactBlockModelView(ContactModelView):
     list_title = 'List Contact (Blocks)'
     list_widget = ListBlock
     show_widget = ShowBlockWidget
     list_template = 'contact_block.html'
+
 
 class ContactLinkModelView(ContactModelView):
     list_title = 'List Contact (Links)'
@@ -62,11 +72,17 @@ class ContactLinkModelView(ContactModelView):
 
 class GroupModelView(ModelView):
     datamodel = SQLAInterface(ContactGroup)
-    related_views = [ContactModelView, ContactItemModelView, ContactThumbnailModelView, ContactBlockModelView, ]
+    related_views = [
+        ContactModelView,
+        ContactItemModelView,
+        ContactThumbnailModelView,
+        ContactBlockModelView
+    ]
     list_template = 'contact_group.html'
     add_template = 'contact_group_add.html'
     edit_template = 'contact_group_edit.html'
     show_template = 'contact_group_show.html'
+
 
 class ContactChartView(GroupByChartView):
     datamodel = SQLAInterface(Contact)
@@ -88,6 +104,7 @@ class ContactChartView(GroupByChartView):
 
 def pretty_month_year(value):
     return calendar.month_name[value.month] + ' ' + str(value.year)
+
 
 def pretty_year(value):
     return str(value.year)
@@ -120,8 +137,10 @@ class GroupMasterView(MasterDetailView):
 #-----------------------------------------------------
 #-----------------------------------------------------
 
+
 def pretty_month_year(value):
     return calendar.month_name[value.month] + ' ' + str(value.year)
+
 
 def pretty_year(value):
     return str(value.year)
@@ -139,9 +158,8 @@ class CountryDirectChartView(DirectByChartView):
 
     definitions = [
         {
-            #'label': 'Monthly',
             'group': 'stat_date',
-            'series': ['unemployed','college']
+            'series': ['unemployed', 'college']
         }
     ]
 

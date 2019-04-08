@@ -1,4 +1,4 @@
-from flask.ext.appbuilder.views import IndexView
+from flask_appbuilder.views import IndexView
 
 
 class FABView(IndexView):

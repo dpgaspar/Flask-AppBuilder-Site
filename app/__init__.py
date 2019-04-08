@@ -1,9 +1,9 @@
 import logging
 from flask import Flask
-from flask.ext.appbuilder import AppBuilder, SQLA
+from flask_appbuilder import AppBuilder, SQLA
 from sqlalchemy.engine import Engine
 from sqlalchemy import event
-from indexview import FABView
+from .indexview import FABView
 
 logging.basicConfig(format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 logging.getLogger().setLevel(logging.DEBUG)
@@ -25,6 +25,7 @@ def set_sqlite_pragma(dbapi_connection, connection_record):
     
 
 from app import views, data
+from app import api
 
 db.create_all()
 data.fill_gender()

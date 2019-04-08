@@ -1,8 +1,8 @@
 import datetime
 import random
 import logging
-from models import Gender, Country, CountryStats
-from app import db
+from . import db
+from .models import Gender, Country, CountryStats
 
 log = logging.getLogger(__name__)
 
